@@ -5,7 +5,7 @@ apt-get update
 apt-get install -y default-mysql-server nano unzip zip libzip-dev libicu-dev nano
 docker-php-ext-install zip mysqli pdo pdo_mysql intl
 
-## Enable mod_rewrite for Apache
+## Configure apache
 a2enmod rewrite
 
 ## Start and configure MySQL
@@ -19,8 +19,6 @@ chmod +x /usr/bin/composer
 
 ## Set up local permissions
 chmod +x /var/www/html/bin/console
-cp /var/www/html/.env.dist /var/www/html/.env
-chown www-data:www-data -R /var/www/html
 
 ## Install eccube dependencies
 composer install
