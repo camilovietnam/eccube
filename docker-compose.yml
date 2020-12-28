@@ -1,0 +1,23 @@
+version: "3.7"
+
+services: 
+  ec2: 
+    image: php:7.2-apache
+    container_name: ec2
+    ports: 
+    - 8888:80
+    volumes:
+      - ./ec2:/var/www/html
+    environment:
+      XDEBUG_CONFIG: remote_host=172.17.0.1
+
+  ec4: 
+    image: php:7.2-apache
+    container_name: ec4
+    ports: 
+    - 8899:80
+    volumes:
+      - ./ec4:/var/www/html
+    environment:
+      XDEBUG_CONFIG: remote_host=172.17.0.1
+
