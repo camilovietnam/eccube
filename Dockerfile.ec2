@@ -26,7 +26,3 @@ RUN chown www-data:www-data -R /var/www/html && chmod -R 777 /var/www/html
 
 RUN sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\/html/g' \
         /etc/apache2/sites-available/000-default.conf 
-
-COPY ./ec2.config.php /var/www/html/data/config/config.php
-
-RUN chmod 666 /var/www/html/data/config/config.php
