@@ -2,7 +2,9 @@ version: "3.7"
 
 services: 
   ec2: 
-    image: php:7.2-apache
+    build: 
+        context: .
+        dockerfile: Dockerfile.ec2
     container_name: ec2
     ports: 
     - 8888:80
