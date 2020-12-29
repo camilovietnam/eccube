@@ -5,16 +5,16 @@
 CONFIG_PHP="data/config/config.php"
 ADMIN_MAIL=${ADMIN_MAIL:-"camilovietnam@gmail.com"}
 SHOP_NAME=${SHOP_NAME:-"EC-CUBE 2.17"}
-HTTP_URL=${HTTP_URL:-"http://localhost:8000/"}
-HTTPS_URL=${HTTPS_URL:-"http://localhost:8000/"}
+HTTP_URL=${HTTP_URL:-"http://localhost/"}
+HTTPS_URL=${HTTPS_URL:-"http://localhost/"}
 ROOT_URLPATH=${ROOT_URLPATH:-"/"}
 DOMAIN_NAME=${DOMAIN_NAME:-""}
 ADMIN_DIR=${ADMIN_DIR:-"admin/"}
 
-DBSERVER=${DBSERVER-"172.17.0.1"}
+DBSERVER=${DBSERVER-"eccube_db"}
 DBNAME=${DBNAME:-"ec2"}
 DBUSER=${DBUSER:-"root"}
-DBPASS=${DBPASS:-"q"}
+DBPASS=${DBPASS:-"123"}
 
 MAIL_BACKEND=${MAIL_BACKEND-"smtp"}
 SMTP_HOST=${SMTP_HOST-"127.0.0.1"}
@@ -54,7 +54,7 @@ case "${DBTYPE}" in
     DBPORT=${DBPORT:-"3306"}
     DB=mysqli;
 ;;
-* ) echo "ERROR:: argument is invaid"
+* ) echo "ERROR:: argument is invalid (run ec2install.sh mysql if you want MySQL)"
 exit
 ;;
 esac
@@ -65,8 +65,7 @@ esac
 install_dependencies()
 {
     # Install dependencies
-    apt-get update
-    apt-get install -y default-mysql-server \
+    apt-get update && apt-get install -y default-mysql-server \
          nano unzip zip libzip-dev libicu-dev libpng-dev netcat \
          libjpeg-dev libwebp-dev zlib1g-dev libxpm-dev lynx iputils-ping
     docker-php-ext-install zip mysqli pdo pdo_mysql intl gd
@@ -79,7 +78,9 @@ install_dependencies()
     echo "alias x='exit'" >> ~/.bashrc
     echo "alias c='clear'" >> ~/.bashrc
     echo "alias eee='nano ~/.bashrc'" >> ~/.bashrc
+    echo "alias apacherestart='service apache2 restart'" >> ~/.bashrc
     echo "alias rrr='. ~/.bashrc'" >> ~/.bashrc
+    . ~/.bashrc
     
 
     ## Configure apache
@@ -95,8 +96,8 @@ install_dependencies()
     chown www-data:www-data -R /var/www/html
     chmod -R 777 /var/www/html
 
-    sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\/html/g' /etc/apache2/sites-available/000-default.conf 
-
+    sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\/html/g' \
+        /etc/apache2/sites-available/000-default.conf 
 }
 
 adjust_directory_permissions()
