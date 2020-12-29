@@ -12,7 +12,7 @@ DOMAIN_NAME=${DOMAIN_NAME:-""}
 ADMIN_DIR=${ADMIN_DIR:-"admin/"}
 
 DBSERVER=${DBSERVER-"eccube_db"}
-DBNAME=${DBNAME:-"ec2"}
+DBNAME=${DBNAME:-"eccube_db"}
 DBUSER=${DBUSER:-"root"}
 DBPASS=${DBPASS:-"123"}
 
