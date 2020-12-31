@@ -15,3 +15,6 @@ ec2/Smarty/templates_c
 
 # Ignore installed Composer packages
 ec2/data/vendor
+
+# Ignore temporary installation files
+ec2/html/install/temp

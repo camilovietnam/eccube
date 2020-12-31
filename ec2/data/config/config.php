@@ -1,5 +1,4 @@
 <?php
-define('ECCUBE_INSTALL', 'ON');
 define('HTTP_URL', 'http://localhost:8888');
 define('HTTPS_URL', 'http://localhost:8888');
 define('ROOT_URLPATH', '/');
