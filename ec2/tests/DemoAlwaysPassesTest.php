@@ -2,9 +2,8 @@
 
 use PHPUnit\Framework\TestCase;
 
-class DemoSuccessTest extends TestCase{
-
-	public function demoTestAlwaysPasses()
+class DemoSuccessTest extends TestCase {
+	public function testAlwaysPasses()
 	{
 		$a = 2;
 		$b = 2;
