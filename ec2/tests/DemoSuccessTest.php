@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class DemoSuccessTest {
+class DemoSuccessTest extends TestCase{
 
 	public function demoTestAlwaysPasses()
 	{
