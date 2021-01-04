@@ -5,7 +5,7 @@
 mysql/*
 
 # Ignore ECCUBE cache
-ec2/data/cache/*
+# ec2/data/cache/*
 
 # Ignore ECCUBE logs
 ec2/data/logs
