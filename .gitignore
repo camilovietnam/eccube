@@ -8,7 +8,7 @@ mysql/*
 ec2/data/cache/*
 
 # Ignore ECCUBE logs
-#ec2/data/logs/*
+ec2/data/logs/*
 
 # Ignore compiled Smarty templates
 ec2/Smarty/templates_c
