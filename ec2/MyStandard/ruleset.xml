@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="MyStandard">
+    <description>Custom Standard for Merchview</description>
+    <rule ref="Zend" >
+        <exclude name="Zend.NamingConventions.ValidVariableName"/>
+    </rule>
+</ruleset>
