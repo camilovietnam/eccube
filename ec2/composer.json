@@ -55,5 +55,8 @@
             "data/class",
             "data/class_extends"
         ]
+    },
+    "scripts": {
+        "phpcs": "data/vendor/bin/phpcs -p --standard=./phpcs"
     }
 }
