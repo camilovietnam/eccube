@@ -57,6 +57,7 @@
         ]
     },
     "scripts": {
-        "phpcs": "data/vendor/bin/phpcs -p --standard=./phpcs"
+        "phpcs": "data/vendor/bin/phpcs -p --standard=./phpcs",
+        "phpunit": "data/vendor/bin/phpunit tests"
     }
 }
