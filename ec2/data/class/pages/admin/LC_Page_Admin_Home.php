@@ -101,6 +101,8 @@ class LC_Page_Admin_Home extends LC_Page_Admin_Ex
 
         // お知らせ一覧の取得
         $this->arrInfo = $this->lfGetInfo();
+
+        $this->whatever = 'mamalama';
     }
 
     /**
