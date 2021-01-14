@@ -65,3 +65,7 @@ SC_Helper_HandleError_Ex::load();
 // アプリケーション初期化処理
 $objInit = new SC_Initial_Ex();
 $objInit->init();
+
+// Autoload translations
+SC_ClassAutoloader_Ex::autoload(CLASS_EX_REALDIR . 'SC_Helper_translation_Ex');
+SC_Helper_Translation::load();

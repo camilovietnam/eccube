@@ -5,23 +5,21 @@
  * @subpackage plugins
  */
 
-use Symfony\Component\Translation\Translator;
-
 /**
  * Smarty plugin
  *
  * Type:     modifier<br>
- * Name:     u<br>
+ * Name:     trans<br>
  * Date:     Dec 28, 2010<br>
- * Purpose:  URL エンコードを行った後で、HTML エスケープを行う<br>
- * Example:  {$text|u}
- * @author   Seasoft 塚田将久
+ * Purpose:  Translate words using Symfony's translation package
+ * Example:  {$text|trans}
+ * @author   Scuti
  * @param string $string
  * @return string
  */
 function smarty_modifier_trans($string)
 {
-    $translator = new Translator('en');
+    $translator = SC_Helper_Translation_Ex::getSingletonInstance();
 
     return $translator->trans($string);
 }
