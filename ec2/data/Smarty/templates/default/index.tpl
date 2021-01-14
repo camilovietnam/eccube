@@ -117,7 +117,7 @@
             </div>
             <div class="col">
                 <div>
-                    <img src="upload/save_image/nabe130.jpg" alt="">
+                    <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
                 <div class="product-name">Name</div>
                 <div>Price</div>
@@ -131,7 +131,7 @@
             </div>
             <div class="col">
                 <div>
-                    <img src="upload/save_image/ice130.jpg" alt="">
+                    <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
                 <div class="product-name">Name</div>
                 <div>Price</div>
@@ -199,14 +199,14 @@
             </div>
             <div class="col">
                 <div>
-                    <img src="upload/save_image/ice130.jpg" alt="">
+                    <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
                 <div class="product-name">Name</div>
                 <div>Price</div>
             </div>
             <div class="col">
                 <div>
-                    <img src="upload/save_image/nabe130.jpg" alt="">
+                    <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
                 <div class="product-name">Name</div>
                 <div>Price</div>
