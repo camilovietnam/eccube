@@ -80,7 +80,7 @@
 <div id="navi-wrap">
     <ul id="navi" class="clearfix">
         <li id="navi-basis" class="on_level1<!--{if $tpl_mainno eq "basis"}--> on<!--{/if}-->">
-            <div><span>    <!--{$whatever|trans}--> 基本情報管理</span></div>
+            <div><span><!--{'基本情報管理'|trans}--> </span></div>
             <!--{include file="`$smarty.const.TEMPLATE_ADMIN_REALDIR`basis/subnavi.tpl"}-->
         </li>
         <li id="navi-products" class="on_level1<!--{if $tpl_mainno eq "products"}--> on<!--{/if}-->">
