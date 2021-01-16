@@ -60,15 +60,19 @@
 
 <style>
     .new-products .row {
+        background: #0f0f0f;
+        color: white;
         margin: auto;
         margin-top: 50px;
         padding: 10px;
+    }
+    .new-products .row {
+
     }
     .new-products .col {
         width: 100%;
         height: 100%;
     }
-
     .new-products .item-1 {
         padding-top: 30px;
         text-transform: uppercase;
@@ -80,21 +84,17 @@
         width: 20px;
         border: 1px solid black;
     }
-
     .new-products .item-1 button {
         margin-top: 10px;
         background: black;
         color: white;
     }
-
     .new-products .col h2 {
         font-weight: bold;
     }
-
     .new-products .product-name {
         font-weight: bold;
     }
-
     .new-products img {
         width: 100%;
     }
@@ -105,7 +105,7 @@
         <div class="row">
             <div class="col item-1">
                 <div>
-                    <h2>New Item</h2>
+                    <h2>New Items</h2>
                 </div>
                 <hr>
                 <div>
@@ -114,6 +114,96 @@
                 <div>
                     <button>More</button>
                 </div>
+            </div>
+            <div class="col">
+                <div>
+                    <img src="upload/save_image/recipe130.jpg" alt="">
+                </div>
+                <div class="product-name">Delicious Food</div>
+                <div>1500</div>
+            </div>
+            <div class="col">
+                <div>
+                    <img src="upload/save_image/recipe130.jpg" alt="">
+                </div>
+                <div class="product-name">Bread</div>
+                <div>600</div>
+            </div>
+            <div class="col">
+                <div>
+                    <img src="upload/save_image/recipe130.jpg" alt="">
+                </div>
+                <div class="product-name">Cake</div>
+                <div>1100</div>
+            </div>
+            <div class="col">
+                <div>
+                    <img src="upload/save_image/recipe130.jpg" alt="">
+                </div>
+                <div class="product-name">Wine</div>
+                <div>3500</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .recent-products .row {
+        margin: auto;
+        padding: 10px
+    }
+    .recent-products .col {
+        width: 100%;
+        height: 100%;
+    }
+    .recent-products .item-1 {
+        padding-top: 30px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .recent-products .item-1 hr {
+        color: black;
+        background: black;
+        width: 20px;
+        border: 1px solid black;
+    }
+    .recent-products .item-1 button {
+        margin-top: 10px;
+        background: black;
+        color: white;
+    }
+    .recent-products .col h2 {
+        font-weight: bold;
+    }
+    .recent-products .product-name {
+        font-weight: bold;
+    }
+    .recent-products img {
+        width: 100%;
+    }
+</style>
+
+<div class="container">
+    <div class="recent-products">
+        <div class="row">
+            <div class="col item-1">
+                <div>
+                    <h2>Recently seen</h2>
+                </div>
+                <hr>
+                <div>
+                    新着商品
+                </div>
+                <div>
+                    <button>More</button>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <img src="upload/save_image/recipe130.jpg" alt="">
+                </div>
+                <div class="product-name">Name</div>
+                <div>Price</div>
             </div>
             <div class="col">
                 <div>
@@ -141,53 +231,48 @@
 </div>
 
 <style>
-    .recent-products .row {
-        margin: auto;
+    .recommended-products .row {
         background: #f6f6f6;
+        margin: auto;
         padding: 10px
     }
-    .recent-products .col {
+    .recommended-products .col {
         width: 100%;
         height: 100%;
     }
-
-    .recent-products .item-1 {
+    .recommended-products .item-1 {
         padding-top: 30px;
         text-transform: uppercase;
         text-align: center;
     }
-    .recent-products .item-1 hr {
+    .recommended-products .item-1 hr {
         color: black;
         background: black;
         width: 20px;
         border: 1px solid black;
     }
-
-    .recent-products .item-1 button {
+    .recommended-products .item-1 button {
         margin-top: 10px;
         background: black;
         color: white;
     }
-
-    .recent-products .col h2 {
+    .recommended-products .col h2 {
         font-weight: bold;
     }
-
-    .recent-products .product-name {
+    .recommended-products .product-name {
         font-weight: bold;
     }
-
-    .recent-products img {
+    .recommended-products img {
         width: 100%;
     }
 </style>
 
 <div class="container">
-    <div class="recent-products">
+    <div class="recommended-products">
         <div class="row">
             <div class="col item-1">
                 <div>
-                    <h2>Recently seen</h2>
+                    <h2>Recommended</h2>
                 </div>
                 <hr>
                 <div>
@@ -196,6 +281,13 @@
                 <div>
                     <button>More</button>
                 </div>
+            </div>
+            <div class="col">
+                <div>
+                    <img src="upload/save_image/recipe130.jpg" alt="">
+                </div>
+                <div class="product-name">Name</div>
+                <div>Price</div>
             </div>
             <div class="col">
                 <div>
