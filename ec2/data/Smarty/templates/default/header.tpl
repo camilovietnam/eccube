@@ -44,6 +44,7 @@
         border: none;
         outline: 0;
         width: 100%;
+        padding-left: 3px;
     }
     div.search-left option {
         color: black;
@@ -167,16 +168,16 @@
                                 <div class="link-item">
                                     <span class="fas fa-user fa-heart"></span>
                                     <span class="link-text">
-                                Yêu thích
-                            </span>
+                                         <!--{'public.top.favorites'|trans}-->
+                                    </span>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="link-item">
                                     <span class="fas fa-user fa-lock"></span>
                                     <span class="link-text">
-                                Đăng nhập
-                            </span>
+                                    <!--{'public.top.login'|trans}-->
+                                    </span>
                                 </div>
                             </div>
                             <div class="col-4">

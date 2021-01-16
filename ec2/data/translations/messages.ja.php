@@ -16,5 +16,11 @@ return [
                 'store_mgmt' => 'オーナーズストア'
             ],
         ]
-    ]
+    ],
+    'public' => [
+      'top' => [
+          'favorites' => 'お気に入り',
+          'login' => 'ログイン',
+      ]
+    ],
 ];

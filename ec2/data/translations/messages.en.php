@@ -15,6 +15,12 @@ return [
                 'system_mgmt' => 'System',
                 'store_mgmt' => 'Store settings',
             ],
+        ],
+    ],
+    'public' => [
+        'top' => [
+            'favorites' => 'Favorites',
+            'login' => 'Login',
         ]
-    ]
+    ],
 ];
