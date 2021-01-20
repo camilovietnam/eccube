@@ -139,10 +139,10 @@
 
                     <div class="container button_area">
                         <div class="row">
-                            <div class="col-12 col-md-6 col_left">
+                            <div class="col-12 col-lg-6 col_left">
                                 <button><!--{'common.login'|trans}--></button>
                             </div>
-                            <div class="col-12 col-md-6 col_right">
+                            <div class="col-12 col-lg-6 col_right">
                                 <div>
                                     <a href="/forgot/">
                                         <!--{'mypage.forgot_login'|trans}-->
