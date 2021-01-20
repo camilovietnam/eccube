@@ -48,7 +48,8 @@
         "setasign/fpdf": "1.7",
         "setasign/fpdi-fpdf": "1.6",
         "silverorange/mdb2": "2.5.2-b.5",
-        "smarty/smarty": "*"
+        "smarty/smarty": "*",
+        "symfony/translation": "^2.8"
     },
     "autoload": {
         "classmap": [
