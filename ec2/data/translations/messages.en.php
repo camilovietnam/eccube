@@ -27,6 +27,8 @@ return [
     ],
     'mypage' => [
         'login_memory' => 'Remember your email address on your computer',
+        'forgot_login' => 'Forgot your login information?',
+        'register_new_member' => 'New member registration',
     ],
     'test' => 'Translation test',
 ];

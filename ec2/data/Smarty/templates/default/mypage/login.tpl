@@ -85,7 +85,7 @@
         color: #fff;
         background-color: #525263;
         border: 1px solid transparent;
-        width: 80%;
+        width: 100%;
         height: 56px;
     }
 
@@ -93,6 +93,9 @@
         background: #3b3b47;
     }
 
+    .col_right {
+        text-align: left;
+    }
 </style>
 
 <div id="login_wrapper">
@@ -136,11 +139,20 @@
 
                     <div class="container button_area">
                         <div class="row">
-                            <div class="col col_left">
+                            <div class="col-12 col-md-6 col_left">
                                 <button><!--{'common.login'|trans}--></button>
                             </div>
-                            <div class="col col_right">
-                                Button 2
+                            <div class="col-12 col-md-6 col_right">
+                                <div>
+                                    <a href="/forgot/">
+                                        <!--{'mypage.forgot_login'|trans}-->
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="/entry/kiyaku.php">
+                                        <!--{'mypage.register_new_member'|trans}-->
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

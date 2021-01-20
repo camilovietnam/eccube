@@ -27,6 +27,8 @@ return [
     ],
     'mypage' => [
         'login_memory' => 'メールアドレスをコンピューターに記憶させる',
+        'forgot_login' => 'ログイン情報をお忘れですか？',
+        'register_new_member' => '新規会員登録',
     ],
     'test' => 'テスト',
 ];
