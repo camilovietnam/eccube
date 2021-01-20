@@ -176,8 +176,10 @@
                             <div class="link-item">
                                 <span class="fas fa-user fa-lock"></span>
                                 <span class="link-text">
-                                    <!--{'public.top.login'|trans}-->
-                                    </span>
+                                    <a href="/mypage/login.php">
+                                        <!--{'public.top.login'|trans}-->
+                                    </a>
+                                </span>
                             </div>
                         </div>
                         <div class="col-4">
