@@ -131,7 +131,7 @@
                                 <!--{assign var=key value="login_memory"}-->
                                 <input type="checkbox" name="<!--{$key}-->" value="1"<!--{$tpl_login_memory|sfGetChecked:1}--> id="login_memory" />
                                 <label for="login_memory">
-                                    <!--{'mypage.login_memory'|trans}-->
+                                    <b><!--{'mypage.login_memory'|trans}--></b>
                                 </label>
                             </p>
                         </dd>
