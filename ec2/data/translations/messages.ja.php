@@ -1,5 +1,8 @@
 <?php
 return [
+    'common' => [
+        'login' => 'ログイン',
+    ],
     'admin' => [
         'home' => [
             'menu' => [
@@ -21,6 +24,9 @@ return [
             'favorites' => 'お気に入り',
             'login' => 'ログイン',
         ]
+    ],
+    'mypage' => [
+        'login_memory' => 'メールアドレスをコンピューターに記憶させる',
     ],
     'test' => 'テスト',
 ];

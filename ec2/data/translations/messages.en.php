@@ -1,5 +1,8 @@
 <?php
 return [
+    'common' => [
+        'login' => 'Login',
+    ],
     'admin' => [
         'home' => [
             'menu' => [
@@ -21,6 +24,9 @@ return [
             'favorites' => 'Favorites',
             'login' => 'Login',
         ]
+    ],
+    'mypage' => [
+        'login_memory' => 'Remember your email address on your computer',
     ],
     'test' => 'Translation test',
 ];
