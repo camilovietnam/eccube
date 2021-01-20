@@ -20,3 +20,4 @@ define('SMTP_HOST', '127.0.0.1');
 define('SMTP_PORT', '1025');
 define('SMTP_USER', '');
 define('SMTP_PASSWORD', '');
+define('UI_LANG', 'en');

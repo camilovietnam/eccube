@@ -22,4 +22,5 @@ return [
             'login' => 'Login',
         ]
     ],
+    'test' => 'Translation test',
 ];
