@@ -294,11 +294,13 @@ div#undercolumn_login .login_area h4 {
 #header_wrap {
     border-top: solid 3px #f90;
     min-height: 82px;
-    /*background: url("../img/common/bg_header.gif") repeat-x bottom #fffaf0;*/
+    background-color: white;
+    width: 980px;
+    margin: auto;
 }
 #header {
     margin: auto;
-    width: 980px;
+    width: 800px;
 }
 #header_utility {
     float: right;
@@ -356,7 +358,7 @@ div#header_navi ul li.entry {
     margin: auto;
     padding: 30px 1px 90px;
     border-top: solid 1px #ccc;
-    width: 950px;
+    width: 980px;
 }
 #pagetop {
     width: 210px;
@@ -364,9 +366,9 @@ div#header_navi ul li.entry {
     text-align: right;
 }
 #copyright {
-    width: 740px;
+    width: 100%;
     float: left;
-    text-align: left;
+    text-align: center;
     font-size: 97%;
 }
 
