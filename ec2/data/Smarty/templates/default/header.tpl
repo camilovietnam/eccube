@@ -127,6 +127,16 @@
     }
 
 </style>
+
+<div>
+    <!--{if $tpl_login or $isLogin}-->
+        <form name="header_login_form" id="header_login_form" method="post" action="<!--{$smarty.const.HTTPS_URL}-->frontparts/login_check.php"<!--{if !$tpl_login}--> onsubmit="return eccube.checkLoginFormInputted('header_login_form')"<!--{/if}-->>
+            <input type="hidden" name="mode" value="login" />
+            <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
+            <input type="hidden" name="url" value="<!--{$smarty.server.REQUEST_URI|h}-->" />
+        </form>
+    <!--{/if}-->
+</div>
 <div id="header_wrap">
     <div id="header" class="clearfix">
         <div class="container-fluid navi">
@@ -163,7 +173,9 @@
                 <div class="col-12 col-md-4">
                     <div class="logo text-center">
                         <h1>
-                            <!--{$arrSiteInfo.shop_name|h}-->
+                            <a href="/">
+                                <!--{$arrSiteInfo.shop_name|h}-->
+                            </a>
                         </h1>
                     </div>
                 </div>
@@ -179,18 +191,21 @@
                         </div>
                         <div class="col-4">
                             <div class="link-item">
-                                <span class="fas fa-user fa-lock"></span>
-                                <span class="link-text">
-                                    <!--{if $tpl_login}-->
-                                        <a href="/mypage" onclick="eccube.fnFormModeSubmit('header_login_form', 'logout', '', ''); return false;">
-                                            <!--{'common.logout'|trans}-->
-                                        </a>
-                                    <!--{else}-->
+                                <!--{if $tpl_login or $isLogin}-->
+                                    <span class="fas fa-sign-out-alt"></span>
+                                    <span class="link-text">
+                                            <a href="/mypage" onclick="eccube.fnFormModeSubmit('header_login_form', 'logout', '', ''); return false;">
+                                                <!--{'common.logout'|trans}-->
+                                            </a>
+                                    </span>
+                                <!--{else}-->
+                                    <span class="fas fa-lock"></span>
+                                    <span class="link-text">
                                         <a href="/mypage/login.php">
                                             <!--{'common.login'|trans}-->
                                         </a>
-                                    <!--{/if}-->
-                                </span>
+                                    </span>
+                                <!--{/if}-->
                             </div>
                         </div>
                         <div class="col-4">
