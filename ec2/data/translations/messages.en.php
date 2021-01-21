@@ -29,6 +29,13 @@ return [
         'login_memory' => 'Remember your email address on your computer',
         'forgot_login' => 'Forgot your login information?',
         'register_new_member' => 'New member registration',
+        'headers' => [
+            'order_history' => 'Order history',
+            'member_info' => 'Account info',
+            'delivery_information' => 'Delivery info',
+            'payment_information' => 'Payment info',
+            'cancel_account' => 'Close account'
+        ]
     ],
     'test' => 'Translation test',
 ];
