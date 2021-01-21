@@ -60,14 +60,10 @@
 
 <style>
     .new-products .row {
-        background: #0f0f0f;
-        color: white;
+        color: black;
         margin: auto;
         margin-top: 50px;
         padding: 10px;
-    }
-    .new-products .row {
-
     }
     .new-products .col {
         width: 100%;
@@ -120,28 +116,32 @@
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
                 <div class="product-name">Delicious Food</div>
-                <div>1500</div>
+                <div>￥1500</div>
+                <div>熊木杏里</div>
             </div>
             <div class="col">
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
                 <div class="product-name">Bread</div>
-                <div>600</div>
+                <div>￥600</div>
+                <div>熊木杏里</div>
             </div>
             <div class="col">
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
                 <div class="product-name">Cake</div>
-                <div>1100</div>
+                <div>￥1100</div>
+                <div>熊木杏里</div>
             </div>
             <div class="col">
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
                 <div class="product-name">Wine</div>
-                <div>3500</div>
+                <div>￥3500</div>
+                <div>熊木杏里</div>
             </div>
         </div>
     </div>
@@ -150,6 +150,7 @@
 <style>
     .recent-products .row {
         margin: auto;
+        color: black;
         padding: 10px
     }
     .recent-products .col {
@@ -202,29 +203,33 @@
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
-                <div class="product-name">Name</div>
-                <div>Price</div>
+                <div class="product-name">Product X</div>
+                <div>￥650</div>
+                <div>熊木杏里</div>
             </div>
             <div class="col">
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
-                <div class="product-name">Name</div>
-                <div>Price</div>
+                <div class="product-name">Product Y</div>
+                <div>￥850</div>
+                <div>熊木杏里</div>
             </div>
             <div class="col">
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
-                <div class="product-name">Name</div>
-                <div>Price</div>
+                <div class="product-name">Product Z</div>
+                <div>￥999</div>
+                <div>熊木杏里</div>
             </div>
             <div class="col">
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
-                <div class="product-name">Name</div>
-                <div>Price</div>
+                <div class="product-name">Product AA</div>
+                <div>￥123</div>
+                <div>熊木杏里</div>
             </div>
         </div>
     </div>
@@ -232,7 +237,7 @@
 
 <style>
     .recommended-products .row {
-        background: #f6f6f6;
+        color: black;
         margin: auto;
         padding: 10px
     }
@@ -286,29 +291,33 @@
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
-                <div class="product-name">Name</div>
-                <div>Price</div>
+                <div class="product-name">Lunch</div>
+                <div>￥666</div>
+                <div>熊木杏里</div>
             </div>
             <div class="col">
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
-                <div class="product-name">Name</div>
-                <div>Price</div>
+                <div class="product-name">Dinner</div>
+                <div>￥555</div>
+                <div>熊木杏里</div>
             </div>
             <div class="col">
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
-                <div class="product-name">Name</div>
-                <div>Price</div>
+                <div class="product-name">Breakfast</div>
+                <div>￥300</div>
+                <div>熊木杏里</div>
             </div>
             <div class="col">
                 <div>
                     <img src="upload/save_image/recipe130.jpg" alt="">
                 </div>
-                <div class="product-name">Name</div>
-                <div>Price</div>
+                <div class="product-name">Appetizers</div>
+                <div>￥1025</div>
+                <div>熊木杏里</div>
             </div>
         </div>
     </div>
