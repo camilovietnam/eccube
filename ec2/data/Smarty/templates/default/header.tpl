@@ -121,6 +121,11 @@
     .col-links .link-item span {
         margin-left:  3px;
     }
+
+    .link_text a, .link-text a:link, .link-text a:active, a:visited{
+        color: black;
+    }
+
 </style>
 <div id="header_wrap">
     <div id="header" class="clearfix">
@@ -176,9 +181,15 @@
                             <div class="link-item">
                                 <span class="fas fa-user fa-lock"></span>
                                 <span class="link-text">
-                                    <a href="/mypage/login.php">
-                                        <!--{'public.top.login'|trans}-->
-                                    </a>
+                                    <!--{if $tpl_login}-->
+                                        <a href="/mypage" onclick="eccube.fnFormModeSubmit('header_login_form', 'logout', '', ''); return false;">
+                                            <!--{'common.logout'|trans}-->
+                                        </a>
+                                    <!--{else}-->
+                                        <a href="/mypage/login.php">
+                                            <!--{'common.login'|trans}-->
+                                        </a>
+                                    <!--{/if}-->
                                 </span>
                             </div>
                         </div>

@@ -2,6 +2,7 @@
 return [
     'common' => [
         'login' => 'ログイン',
+        'logout' => 'ログアウト',
     ],
     'admin' => [
         'home' => [
