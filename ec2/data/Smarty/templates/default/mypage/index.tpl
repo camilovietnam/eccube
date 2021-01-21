@@ -21,6 +21,23 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 *}-->
+<style>
+    .order-list .row-order {
+        border-top: 1px solid black;
+        padding: 25px 0px;
+    }
+
+    .order-list .detail-btn {
+        padding: 8px;
+        margin-top: 20px;
+        border: 1px solid black;
+        display: inline-block;
+    }
+
+    .order-items .row {
+        margin-bottom: 15px;
+    }
+</style>
 
 <div id="mypagecolumn">
     <!--{if $tpl_navi != ""}-->
@@ -34,28 +51,104 @@
             <input type="hidden" name="order_id" value="" />
             <input type="hidden" name="pageno" value="<!--{$objNavi->nowpage}-->" />
             <h3><!--{$tpl_subtitle|h}--></h3>
-
             <!--{if $objNavi->all_row > 0}-->
-
                 <p><span class="attention"><!--{$objNavi->all_row}-->件</span>の購入履歴があります。</p>
                 <div class="pagenumber_area">
                     <!--▼ページナビ-->
                     <!--{$objNavi->strnavi}-->
                     <!--▲ページナビ-->
                 </div>
-
-                <table summary="購入履歴">
-                    <tr>
-                        <th class="alignC">購入日時</th>
-                        <th class="alignC">注文番号</th>
-                        <th class="alignC">お支払い方法</th>
-                        <th class="alignC">合計金額</th>
-                        <!--{if $smarty.const.MYPAGE_ORDER_STATUS_DISP_FLAG }-->
-                        <th class="alignC">ご注文状況</th>
-                        <!--{/if}-->
-                        <th class="alignC">詳細</th>
-                    </tr>
+                <div class="container-fluid order-list">
                     <!--{section name=cnt loop=$arrOrder}-->
+                    <div class="row row-order">
+                        <div class="col-5">
+                            <b><!--{$arrOrder[cnt].create_date|sfDispDBDate}--><br></b>
+                            <b>Code order</b>: <!--{$arrOrder[cnt].order_id}--><br>
+                            <b>Order status:</b>
+                            <!--{if $smarty.const.MYPAGE_ORDER_STATUS_DISP_FLAG }-->
+                                <!--{assign var=order_status_id value="`$arrOrder[cnt].status`"}-->
+                                <!--{if $order_status_id != $smarty.const.ORDER_PENDING }-->
+                                    <span class="alignC"><!--{$arrCustomerOrderStatus[$order_status_id]|h}--></span>
+                                    <!--{else}-->
+                                    <span class="alignC attention"><!--{$arrCustomerOrderStatus[$order_status_id]|h}--></span>
+                                <!--{/if}-->
+                            <!--{/if}-->
+                            <br>
+                            <a class="detail-btn" href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/history.php?order_id=<!--{$arrOrder[cnt].order_id}-->">
+                                <!--{'mypage.order_history.btn_details'|trans}-->
+                            </a>
+                        </div>
+                        <div class="col-7 order-items">
+                            <!--{* List of order items*}-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h2>
+                                        <b>
+                                            <!--{'mypage.order_history.product_information'|trans}-->
+                                        </b>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="/upload/save_image/recipe130.jpg" alt="" style="width: 100%">
+                                </div>
+                                <div class="col-9 mx-0 px-0">
+                                    <div><b>アーティスト名</b></div>
+                                    <div><b>Colorful CUBE</b></div>
+                                    <div><b>Color</b>: </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <b>Size</b>: L
+                                        </div>
+                                        <div class="col">
+                                            <b>Price</b>: 308
+                                        </div>
+                                        <div class="col">
+                                            <b>Quantity</b>: 1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="/upload/save_image/recipe130.jpg" alt="" style="width: 100%">
+                                </div>
+                                <div class="col-9 mx-0 px-0">
+                                    <div><b>アーティスト名</b></div>
+                                    <div><b>Colorful CUBE</b></div>
+                                    <div><b>Color</b>: </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <b>Size</b>: L
+                                        </div>
+                                        <div class="col">
+                                            <b>Price</b>: 308
+                                        </div>
+                                        <div class="col">
+                                            <b>Quantity</b>: 1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--{/section}-->
+                    <table summary="購入履歴" class="attention">
+                    <div class="attention">This table will be removed</div>
+                        <!--{*                    <tr>*}-->
+                        <!--{*                        <th class="alignC">購入日時</th>*}-->
+                        <!--{*                        <th class="alignC">注文番号</th>*}-->
+                        <!--{*                        <th class="alignC">お支払い方法</th>*}-->
+                        <!--{*                        <th class="alignC">合計金額</th>*}-->
+                        <!--{*                        <!--{if $smarty.const.MYPAGE_ORDER_STATUS_DISP_FLAG }-->*}-->
+                        <!--{*                        <th class="alignC">ご注文状況</th>*}-->
+                        <!--{*                        <!--{/if}-->*}-->
+                        <!--{*                        <th class="alignC">詳細</th>*}-->
+                        <!--{*                    </tr>*}-->
+                        <!--{section name=cnt loop=$arrOrder}-->
+
                         <tr>
                             <td class="alignC"><!--{$arrOrder[cnt].create_date|sfDispDBDate}--></td>
                             <td><!--{$arrOrder[cnt].order_id}--></td>
@@ -66,15 +159,19 @@
                             <!--{if $smarty.const.MYPAGE_ORDER_STATUS_DISP_FLAG }-->
                                 <!--{assign var=order_status_id value="`$arrOrder[cnt].status`"}-->
                                 <!--{if $order_status_id != $smarty.const.ORDER_PENDING }-->
-                                <td class="alignC"><!--{$arrCustomerOrderStatus[$order_status_id]|h}--></td>
-                                <!--{else}-->
-                                <td class="alignC attention"><!--{$arrCustomerOrderStatus[$order_status_id]|h}--></td>
+                                    <td class="alignC"><!--{$arrCustomerOrderStatus[$order_status_id]|h}--></td>
+                                    <!--{else}-->
+                                    <td class="alignC attention"><!--{$arrCustomerOrderStatus[$order_status_id]|h}--></td>
                                 <!--{/if}-->
                             <!--{/if}-->
-                            <td class="alignC"><a href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/history.php?order_id=<!--{$arrOrder[cnt].order_id}-->">詳細</a></td>
+                            <td class="alignC">
+                                <a href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/history.php?order_id=<!--{$arrOrder[cnt].order_id}-->">詳細
+                                </a>
+                            </td>
                         </tr>
-                    <!--{/section}-->
-                </table>
+                        <!--{/section}-->
+                    </table>
+                </div>
 
             <!--{else}-->
                 <p>購入履歴はありません。</p>

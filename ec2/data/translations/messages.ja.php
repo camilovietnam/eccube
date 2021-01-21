@@ -36,7 +36,11 @@ return [
             'delivery_information' => 'お届け先編集',
             'payment_information' => '決済情報編集',
             'cancel_account' => '退会手続き'
-        ]
+        ],
+        'order_history' => [
+            'btn_details' => '詳細',
+            'product_information' => '商品情報',
+        ],
     ],
     'test' => 'テスト',
 ];

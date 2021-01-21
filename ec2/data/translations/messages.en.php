@@ -36,7 +36,11 @@ return [
             'delivery_information' => 'Delivery info',
             'payment_information' => 'Payment info',
             'cancel_account' => 'Close account'
-        ]
+        ],
+        'order_history' => [
+            'btn_details' => 'See details',
+            'product_information' => 'Product information',
+        ],
     ],
     'test' => 'Translation test',
 ];
