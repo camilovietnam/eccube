@@ -44,33 +44,34 @@
 </style>
 <!--▼FOOTER-->
 <!--{strip}-->
-    <div id="footer_wrap">
-        <div id="footer" class="clearfix">
-            <div class="footer-links">
-                <div class="row justify-content-center">
-                    <div class="col-2">当サイトについて</div>
-                    <div class="col-2">プライバシーポリシー </div>
-                    <div class="col-2">特定商取引法に基づく表記 </div>
-                    <div class="col-2">お問い合わせ</div>
+<div id="footer_wrap">
+    <div id="footer" class="clearfix">
+        <div class="footer-links">
+            <div class="row justify-content-center">
+                <div class="col-2">当サイトについて</div>
+                <div class="col-2">プライバシーポリシー </div>
+                <div class="col-2">特定商取引法に基づく表記 </div>
+                <div class="col-2">お問い合わせ</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>
+                        <!--{$arrSiteInfo.shop_name|h}-->
+                    </h1>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <h1>
-                            <!--{$arrSiteInfo.shop_name|h}-->
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div id="copyright">Copyright ©
-                            &nbsp;<!--{if $smarty.const.RELEASE_YEAR != $smarty.now|date_format:"%Y"}--><!--{$smarty.const.RELEASE_YEAR}-->-<!--{/if}--><!--{$smarty.now|date_format:"%Y"}-->
-                            &nbsp;<!--{$arrSiteInfo.shop_name_eng|default:$arrSiteInfo.shop_name|h}--> All rights reserved.
-                        </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div id="copyright">Copyright ©
+                        &nbsp;<!--{if $smarty.const.RELEASE_YEAR != $smarty.now|date_format:"%Y"}--><!--{$smarty.const.RELEASE_YEAR}-->-<!--{/if}--><!--{$smarty.now|date_format:"%Y"}-->
+                        &nbsp;<!--{$arrSiteInfo.shop_name_eng|default:$arrSiteInfo.shop_name|h}--> All rights reserved.
                     </div>
                 </div>
             </div>
 
         </div>
+
     </div>
+</div>
 <!--{/strip}-->
 <!--▲FOOTER-->

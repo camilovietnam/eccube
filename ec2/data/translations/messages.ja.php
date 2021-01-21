@@ -1,6 +1,9 @@
 <?php
-
 return [
+    'common' => [
+        'login' => 'ログイン',
+        'logout' => 'ログアウト',
+    ],
     'admin' => [
         'home' => [
             'menu' => [
@@ -18,9 +21,22 @@ return [
         ]
     ],
     'public' => [
-      'top' => [
-          'favorites' => 'お気に入り',
-          'login' => 'ログイン',
-      ]
+        'top' => [
+            'favorites' => 'お気に入り',
+            'login' => 'ログイン',
+        ]
     ],
+    'mypage' => [
+        'login_memory' => 'メールアドレスをコンピューターに記憶させる',
+        'forgot_login' => 'ログイン情報をお忘れですか？',
+        'register_new_member' => '新規会員登録',
+        'headers' => [
+            'order_history' => 'ご注文履歴',
+            'member_info' => '会員情報編集',
+            'delivery_information' => 'お届け先編集',
+            'payment_information' => '決済情報編集',
+            'cancel_account' => '退会手続き'
+        ]
+    ],
+    'test' => 'テスト',
 ];

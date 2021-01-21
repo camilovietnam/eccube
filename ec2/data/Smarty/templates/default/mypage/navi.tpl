@@ -21,55 +21,117 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 *}-->
-
 <div id="mynavi_area">
     <!--{strip}-->
-        <ul class="mynavi_list clearfix">
+    <style>
+        .mynavi_list {
+            margin: 50px auto;
+        }
+        .mynavi_list .col {
+            border: 1px solid black;
+            margin: 0;
+            padding: 0;
+            height: 50px;
+            text-align: center;
+        }
 
-            <!--{* 会員状態 *}-->
-            <!--{if $tpl_login}-->
-                <li><a href="./<!--{$smarty.const.DIR_INDEX_PATH}-->" class="<!--{if $tpl_mypageno == 'index'}--> selected<!--{/if}-->">
-                    購入履歴一覧</a></li>
-                <!--{if $smarty.const.OPTION_FAVORITE_PRODUCT == 1}-->
-                    <li><a href="favorite.php" class="<!--{if $tpl_mypageno == 'favorite'}--> selected<!--{/if}-->">
-                        お気に入り一覧</a></li>
-                <!--{/if}-->
-                <li><a href="change.php" class="<!--{if $tpl_mypageno == 'change'}--> selected<!--{/if}-->">
-                    会員登録内容変更</a></li>
-                <li><a href="delivery.php" class="<!--{if $tpl_mypageno == 'delivery'}--> selected<!--{/if}-->">
-                    お届け先追加・変更</a></li>
-                <li><a href="refusal.php" class="<!--{if $tpl_mypageno == 'refusal'}--> selected<!--{/if}-->">
-                    退会手続き</a></li>
+        .mynavi_list a {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            padding-top: 15px;
+        }
 
-            <!--{* 退会状態 *}-->
-            <!--{else}-->
-                <li><a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'index'}--> selected<!--{/if}-->">
-                    購入履歴一覧</a></li>
-                <!--{if $smarty.const.OPTION_FAVORITE_PRODUCT == 1}-->
-                    <li><a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'favorite'}--> selected<!--{/if}-->">
-                        お気に入り一覧</a></li>
-                <!--{/if}-->
-                <li><a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'change'}--> selected<!--{/if}-->">
-                    会員登録内容変更</a></li>
-                <li><a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'delivery'}--> selected<!--{/if}-->">
-                    お届け先追加・変更</a></li>
-                <li><a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'refusal'}--> selected<!--{/if}-->">
-                    退会手続き</a></li>
-            <!--{/if}-->
-        </ul>
+        .mynavi_list a, .mynavi_list a:link, .mynavi_list a:active{
+            color: black;
+        }
 
-        <!--▼現在のポイント-->
-        <!--{if $point_disp !== false}-->
-            <div class="point_announce clearfix">
-                <p>ようこそ&nbsp;／&nbsp;
-                    <span class="user_name"><!--{$CustomerName1|h}--> <!--{$CustomerName2|h}-->様</span>
-                    <!--{if $smarty.const.USE_POINT !== false}-->&nbsp;
-                        現在の所持ポイントは&nbsp;<span class="point st"><!--{$CustomerPoint|n2s|default:"0"|h}-->pt</span>&nbsp;です。
-                    <!--{/if}-->
-                </p>
+        .mynavi_list a:hover, .mynavi_list a.selected {
+            color: #DE5D50;
+        }
+
+    </style>
+    <!--{* 会員状態 *}-->
+    <!--{if $tpl_login}-->
+    <div class="container">
+        <div class="row mynavi_list">
+            <div class="col">
+                <a href="./<!--{$smarty.const.DIR_INDEX_PATH}-->" class="<!--{if $tpl_mypageno == 'index'}--> selected<!--{/if}-->">
+                    <!--{'mypage.headers.order_history'|trans}-->
+                </a>
             </div>
-        <!--{/if}-->
-        <!--▲現在のポイント-->
+            <div class="col my-auto">
+                <a href="change.php" class="<!--{if $tpl_mypageno == 'change'}--> selected<!--{/if}-->">
+                    <!--{'mypage.headers.member_info'|trans}-->
+                </a>
+            </div>
+            <div class="col">
+                <a href="delivery.php" class="<!--{if $tpl_mypageno == 'delivery'}--> selected<!--{/if}-->">
+                    <!--{'mypage.headers.delivery_information'|trans}-->
+                </a>
+            </div>
+            <!--{if $smarty.const.OPTION_FAVORITE_PRODUCT == 1}-->
+            <div class="col">
+                <li>
+                    <a href="/not-implemented" class="<!--{if $tpl_mypageno == 'not_yet'}--> selected<!--{/if}-->">
+                        <!--{'mypage.headers.payment_information'|trans}-->
+                    </a>
+                </li>
+            </div>
+            <!--{/if}-->
+            <div class="col">
+                <a href="/not-implemented" class="<!--{if $tpl_mypageno == 'not_yet'}--> selected<!--{/if}-->">
+                    <!--{'mypage.headers.cancel_account'|trans}-->
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--{* 退会状態 *}-->
+    <!--{else}-->
+    <li>
+        <a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'index'}--> selected<!--{/if}-->">
+            購入履歴一覧
+            <!--{'mypage.headers.order_history'|trans}-->
+        </a>
+    </li>
+    <!--{if $smarty.const.OPTION_FAVORITE_PRODUCT == 1}-->
+    <li>
+        <a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'favorite'}--> selected<!--{/if}-->">
+            お気に入り一覧
+        </a>
+    </li>
+    <!--{/if}-->
+    <li>
+        <a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'change'}--> selected<!--{/if}-->">
+            会員登録内容変更
+        </a>
+    </li>
+    <li>
+        <a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'delivery'}--> selected<!--{/if}-->">
+            お届け先追加・変更
+        </a>
+    </li>
+    <li>
+        <a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'refusal'}--> selected<!--{/if}-->">
+        <a href="<!--{$smarty.const.TOP_URL}-->" class="<!--{if $tpl_mypageno == 'refusal'}--> selected<!--{/if}-->">
+            退会手続き
+        </a>
+    </li>
+    <!--{/if}-->
+
+
+    <!--▼現在のポイント-->
+    <!--{if $point_disp !== false}-->
+    <div class="point_announce clearfix">
+        <p>ようこそ&nbsp;／&nbsp;
+            <span class="user_name"><!--{$CustomerName1|h}--> <!--{$CustomerName2|h}-->様</span>
+            <!--{if $smarty.const.USE_POINT !== false}-->&nbsp;
+            現在の所持ポイントは&nbsp;<span class="point st"><!--{$CustomerPoint|n2s|default:"0"|h}-->pt</span>&nbsp;です。
+            <!--{/if}-->
+        </p>
+    </div>
+    <!--{/if}-->
+    <!--▲現在のポイント-->
     <!--{/strip}-->
 
 </div>

@@ -1,4 +1,4 @@
-<!--{*
+<?php
 /*
  * This file is part of EC-CUBE
  *
@@ -20,18 +20,18 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-*}-->
 
-<div id="mypagecolumn">
-    <!--{include file=$tpl_navi}-->
-    <div id="mycontents_area">
-        <h3><!--{$tpl_subtitle|h}--></h3>
+require_once CLASS_REALDIR . 'helper/SC_Helper_Translation.php';
 
-        <div id="complete_area">
-            <div class="message">
-                会員登録内容の変更が完了いたしました。<br />
-            </div>
-            <p>今後ともご愛顧賜りますようよろしくお願い申し上げます。</p>
-        </div>
-    </div>
-</div>
+/**
+ *
+ * SC_Helper_Translation_Ex This is the Extend class for the translation service
+ *
+ * @package Helper
+ * @author Scuti
+ * @version $Id$
+ */
+class SC_Helper_Translation_Ex extends SC_Helper_Translation
+{
+    // put your code here
+}

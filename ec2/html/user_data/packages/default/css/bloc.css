@@ -253,11 +253,11 @@ ul.button_like li a {
     font-size: 90%;
 }
 #container .login_area dl.formlist dd {
-    margin-bottom: 5px;
-    float: right;
-    width: 300px;
-    vertical-align: bottom;
-    text-align: left;
+    /*margin-bottom: 5px;*/
+    /*float: right;*/
+    /*width: 300px;*/
+    /*vertical-align: bottom;*/
+    /*text-align: left;*/
 }
 #container div#login_area .block_body .mini {
     margin-top: 5px;

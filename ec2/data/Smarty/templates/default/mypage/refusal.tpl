@@ -23,7 +23,6 @@
 *}-->
 
 <div id="mypagecolumn">
-    <h2 class="title"><!--{$tpl_title|h}--></h2>
     <!--{include file=$tpl_navi}-->
     <div id="mycontents_area">
         <h3><!--{$tpl_subtitle|h}--></h3>
