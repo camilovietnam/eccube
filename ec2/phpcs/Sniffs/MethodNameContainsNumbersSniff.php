@@ -11,45 +11,10 @@ namespace PHP_CodeSniffer\Standards\PEAR\Sniffs\NamingConventions;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\AbstractScopeSniff;
-use PHP_CodeSniffer\Util\Common;
 use PHP_CodeSniffer\Util\Tokens;
 
 class MethodNameContainsNumbersSniff extends AbstractScopeSniff
 {
-
-    /**
-     * A list of all PHP magic methods.
-     *
-     * @var array
-     */
-    protected $magicMethods = [
-        'construct'   => true,
-        'destruct'    => true,
-        'call'        => true,
-        'callstatic'  => true,
-        'get'         => true,
-        'set'         => true,
-        'isset'       => true,
-        'unset'       => true,
-        'sleep'       => true,
-        'wakeup'      => true,
-        'serialize'   => true,
-        'unserialize' => true,
-        'tostring'    => true,
-        'invoke'      => true,
-        'set_state'   => true,
-        'clone'       => true,
-        'debuginfo'   => true,
-    ];
-
-    /**
-     * A list of all PHP magic functions.
-     *
-     * @var array
-     */
-    protected $magicFunctions = ['autoload' => true];
-
-
     /**
      * Constructs a PEAR_Sniffs_NamingConventions_ValidFunctionNameSniff.
      */
