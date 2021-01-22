@@ -22,26 +22,184 @@
  */
 *}-->
 
+<style>
+    h1.order-details {
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .product-row {
+        margin-top: 10px;
+        border-top: 1px solid black;
+        padding-top: 10px;
+    }
+
+    .btn-change-address {
+        background: #333;
+        color: white!important;
+        border-radius: 0;
+        width: 60%;
+        height: 40px;
+        display: inline-block;
+        text-align: center;
+        padding-top: 12px;
+    }
+</style>
+
 <div id="mypagecolumn">
     <!--{include file=$tpl_navi}-->
+
     <div id="mycontents_area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8">
+                    <div>
+                        <p>
+                            <span class="st">
+                                <!--{'mypage.order_detail.order_date'|trans}-->:
+                            </span>
+                            <!--{$tpl_arrOrderData.create_date|sfDispDBDate}-->
+                            <br />
+
+                            <span class="st">
+                                <!--{'mypage.order_detail.order_number'|trans}-->:
+                            </span>
+                            <!--{$tpl_arrOrderData.order_id}-->
+                            <br />
+
+
+
+                            <!--{if $smarty.const.MYPAGE_ORDER_STATUS_DISP_FLAG}-->
+                            <span class="st">
+                                    <!--{'mypage.order_detail.order_status'|trans}-->:
+                                </span>
+                            <!--{if $tpl_arrOrderData.status != $smarty.const.ORDER_PENDING}-->
+                            <!--{$arrCustomerOrderStatus[$tpl_arrOrderData.status]|h}-->
+                            <!--{else}-->
+                            <span class="attention"><!--{$arrCustomerOrderStatus[$tpl_arrOrderData.status]|h}--></span>
+                            <!--{/if}-->
+                            <!--{/if}-->
+
+                            <!--{if $is_price_change == true}-->
+                        <div class="attention" Align="right">※金額が変更されている商品があるため、再注文時はご注意ください。</div>
+                        <!--{/if}-->
+                        </p>
+                    </div>
+                    <div>
+                        <h1 class="order-details text-center">
+                            <!--{'mypage.order_history.product_information'|trans}-->
+                        </h1>
+
+                        <!-- Now the list of items: -->
+                        <!--{foreach from=$tpl_arrOrderDetail item=orderDetail}-->
+                            <div class="row product-row">
+                                <div class="col-2">
+                                    <img src="/upload/save_image/nabe130.jpg" alt="" class="w-100">
+                                </div>
+                                <div class="col-8 text-left">
+                                    <a<!--{if $orderDetail.enable}--> href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$orderDetail.product_id|u}-->"<!--{/if}-->><!--{$orderDetail.product_name|h}--></a><br />
+                                    <!--{if $orderDetail.classcategory_name1 != ""}-->
+                                    <!--{$orderDetail.classcategory_name1|h}--><br />
+                                    <!--{/if}-->
+                                    <!--{if $orderDetail.classcategory_name2 != ""}-->
+                                    <!--{$orderDetail.classcategory_name2|h}-->
+                                    <!--{/if}-->
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col">Size: L</div>
+                                        <div class="col">Price: 130</div>
+                                        <div class="col">Quantity: 2</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        <!--{/foreach}-->
+                        <hr>
+
+                        <div class="row">
+                            <div class="col">
+                                <!--{assign var=shippingItem value=$arrShipping[0]}-->
+                                <!--{$shippingItem.shipping_name01|h}-->&nbsp;<!--{$shippingItem.shipping_name02|h}-->
+                                <br>
+                                <!--{$arrPref[$shippingItem.shipping_pref]}--><!--{$shippingItem.shipping_addr01|h}--><!--{$shippingItem.shipping_addr02|h}-->
+                                <br>
+                                <!--{$shippingItem.shipping_tel01}-->-<!--{$shippingItem.shipping_tel02}-->-<!--{$shippingItem.shipping_tel03}-->
+
+                                <div class="row mx-0 my-2 px-0">
+                                    <div class="col mx-0 px-0">
+                                        <!--{'mypage.order_detail.delivery_date'|trans}-->: <!--{$shippingItem.shipping_date|default:'指定なし'|h}-->
+                                        <br>
+                                        <!--{'mypage.order_detail.delivery_time'|trans}-->: <!--{$shippingItem.shipping_time|default:'指定なし'|h}-->
+                                    </div>
+                                    <div class="col">
+                                        <a href="" class="btn-change-address">
+                                            Change address
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <b>Payment info</b>
+                                        <br>
+                                        <!--{'mypage.order_detail.order_payment'|trans}-->:
+                                <!--{$arrPayment[$tpl_arrOrderData.payment_id]|h}-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col">
+                            Subtotal: <br>
+                            Transport fee: <br>
+                        </div>
+                        <div class="col text-right">
+                            <!--{$tpl_arrOrderData.subtotal|n2s}-->円 <br>
+                            <!--{assign var=key value="deliv_fee"}--><!--{$tpl_arrOrderData[$key]|n2s|h}-->円 <br>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            Total amount:
+                        </div>
+                        <div class="col text-right">
+                            <!--{$tpl_arrOrderData.payment_total|n2s}-->円 <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+        <div class="attention">Delete everything after this: </div>
+    <hr>
+
+
+    <div id="">
         <h3><!--{$tpl_subtitle|h}--></h3>
         <div class="mycondition_area clearfix">
-            <p>
+            <p style="border:1px solid blue">
                 <span class="st">購入日時：&nbsp;</span><!--{$tpl_arrOrderData.create_date|sfDispDBDate}--><br />
                 <span class="st">注文番号：&nbsp;</span><!--{$tpl_arrOrderData.order_id}--><br />
                 <span class="st">お支払い方法：&nbsp;</span><!--{$arrPayment[$tpl_arrOrderData.payment_id]|h}--><br />
                 <!--{if $smarty.const.MYPAGE_ORDER_STATUS_DISP_FLAG}-->
-                    <span class="st">ご注文状況：&nbsp;</span>
-                    <!--{if $tpl_arrOrderData.status != $smarty.const.ORDER_PENDING}-->
-                        <!--{$arrCustomerOrderStatus[$tpl_arrOrderData.status]|h}-->
-                    <!--{else}-->
-                        <span class="attention"><!--{$arrCustomerOrderStatus[$tpl_arrOrderData.status]|h}--></span>
-                    <!--{/if}-->
+                <span class="st">ご注文状況：&nbsp;</span>
+                <!--{if $tpl_arrOrderData.status != $smarty.const.ORDER_PENDING}-->
+                <!--{$arrCustomerOrderStatus[$tpl_arrOrderData.status]|h}-->
+                <!--{else}-->
+                <span class="attention"><!--{$arrCustomerOrderStatus[$tpl_arrOrderData.status]|h}--></span>
+                <!--{/if}-->
                 <!--{/if}-->
                 <!--{if $is_price_change == true}-->
-                    <div class="attention" Align="right">※金額が変更されている商品があるため、再注文時はご注意ください。</div>
-                <!--{/if}-->
+            <div class="attention" Align="right">※金額が変更されている商品があるため、再注文時はご注意ください。</div>
+            <!--{/if}-->
             </p>
             <form action="order.php" method="post">
                 <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
@@ -52,7 +210,7 @@
             </form>
         </div>
 
-        <table summary="購入商品詳細">
+        <table summary="購入商品詳細" class="attention">
             <col width="15%" />
             <col width="25%" />
             <col width="20%" />
@@ -72,37 +230,39 @@
                     <td><!--{$orderDetail.product_code|h}--></td>
                     <td><a<!--{if $orderDetail.enable}--> href="<!--{$smarty.const.P_DETAIL_URLPATH}--><!--{$orderDetail.product_id|u}-->"<!--{/if}-->><!--{$orderDetail.product_name|h}--></a><br />
                         <!--{if $orderDetail.classcategory_name1 != ""}-->
-                            <!--{$orderDetail.classcategory_name1|h}--><br />
+                        <!--{$orderDetail.classcategory_name1|h}--><br />
                         <!--{/if}-->
                         <!--{if $orderDetail.classcategory_name2 != ""}-->
-                            <!--{$orderDetail.classcategory_name2|h}-->
+                        <!--{$orderDetail.classcategory_name2|h}-->
                         <!--{/if}-->
                     </td>
                     <td class="alignC">
-                    <!--{if $orderDetail.product_type_id == $smarty.const.PRODUCT_TYPE_DOWNLOAD}-->
+                        <!--{if $orderDetail.product_type_id == $smarty.const.PRODUCT_TYPE_DOWNLOAD}-->
                         <!--{if $orderDetail.is_downloadable}-->
-                            <!--{assign var="downloadable" value="1"}-->
-                            <a target="_self" href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/download.php?order_id=<!--{$tpl_arrOrderData.order_id}-->&product_class_id=<!--{$orderDetail.product_class_id}-->">ダウンロード</a>
+                        <!--{assign var="downloadable" value="1"}-->
+                        <a target="_self" href="<!--{$smarty.const.ROOT_URLPATH}-->mypage/download.php?order_id=<!--{$tpl_arrOrderData.order_id}-->&product_class_id=<!--{$orderDetail.product_class_id}-->">ダウンロード</a>
                         <!--{else}-->
-                            <!--{if $orderDetail.payment_date == "" && $orderDetail.effective == "0"}-->
-                                <!--{$arrProductType[$orderDetail.product_type_id]}--><BR />（入金確認中）
-                            <!--{else}-->
-                                <!--{$arrProductType[$orderDetail.product_type_id]}--><BR />（期限切れ）
-                            <!--{/if}-->
+                        <!--{if $orderDetail.payment_date == "" && $orderDetail.effective == "0"}-->
+                        <!--{$arrProductType[$orderDetail.product_type_id]}--><BR />（入金確認中）
+                        <!--{else}-->
+                        <!--{$arrProductType[$orderDetail.product_type_id]}--><BR />（期限切れ）
                         <!--{/if}-->
-                    <!--{else}-->
+                        <!--{/if}-->
+                        <!--{else}-->
                         <!--{$arrProductType[$orderDetail.product_type_id]}-->
-                    <!--{/if}-->
+                        <!--{/if}-->
                     </td>
                     <td class="alignR"><!--{$orderDetail.price_inctax|n2s|h}-->円
-                    <!--{if $orderDetail.price_inctax != $orderDetail.product_price_inctax}-->
+                        <!--{if $orderDetail.price_inctax != $orderDetail.product_price_inctax}-->
                         <div class="attention">【現在価格】</div><span class="attention"><!--{$orderDetail.product_price_inctax|n2s|h}-->円</span>
-                    <!--{/if}-->
+                        <!--{/if}-->
                     </td>
                     <td class="alignR"><!--{$orderDetail.quantity|h}--></td>
                     <td class="alignR"><!--{$orderDetail.price_inctax|sfMultiply:$orderDetail.quantity|n2s}-->円</td>
                 </tr>
             <!--{/foreach}-->
+
+
             <tr>
                 <th colspan="5" class="alignR">小計</th>
                 <td class="alignR"><!--{$tpl_arrOrderData.subtotal|n2s}-->円</td>
@@ -138,117 +298,121 @@
 
         <!-- 使用ポイントここから -->
         <!--{if $smarty.const.USE_POINT !== false}-->
-            <table summary="使用ポイント">
-                <col width="30%" />
-                <col width="70%" />
-                <tr>
-                    <th class="alignL">ご使用ポイント</th>
-                    <td><!--{assign var=key value="use_point"}--><!--{$tpl_arrOrderData[$key]|n2s|default:0}--> pt</td>
-                </tr>
-                <tr>
-                    <th class="alignL">今回加算されるポイント</th>
-                    <td><!--{$tpl_arrOrderData.add_point|n2s|default:0}--> pt</td>
-                </tr>
-            </table>
+        <table summary="使用ポイント">
+            <col width="30%" />
+            <col width="70%" />
+            <tr>
+                <th class="alignL">ご使用ポイント</th>
+                <td><!--{assign var=key value="use_point"}--><!--{$tpl_arrOrderData[$key]|n2s|default:0}--> pt</td>
+            </tr>
+            <tr>
+                <th class="alignL">今回加算されるポイント</th>
+                <td><!--{$tpl_arrOrderData.add_point|n2s|default:0}--> pt</td>
+            </tr>
+        </table>
         <!--{/if}-->
         <!-- 使用ポイントここまで -->
 
         <!--{if $downloadable != 1}-->
         <!--{foreach item=shippingItem name=shippingItem from=$arrShipping}-->
-            <h3>お届け先<!--{if $isMultiple}--><!--{$smarty.foreach.shippingItem.iteration}--><!--{/if}--></h3>
-            <!--{if $isMultiple}-->
-                <table summary="お届け内容確認">
-                    <col width="30%" />
-                    <col width="40%" />
-                    <col width="20%" />
-                    <col width="10%" />
-                    <tr>
-                        <th class="alignC">商品コード</th>
-                        <th class="alignC">商品名</th>
-                        <th class="alignC">単価</th>
-                        <th class="alignC">数量</th>
-                        <!--{* XXX 購入小計と誤差が出るためコメントアウト
+        <h3>お届け先<!--{if $isMultiple}--><!--{$smarty.foreach.shippingItem.iteration}--><!--{/if}--></h3>
+        <!--{if $isMultiple}-->
+        <table summary="お届け内容確認">
+            <col width="30%" />
+            <col width="40%" />
+            <col width="20%" />
+            <col width="10%" />
+            <tr>
+                <th class="alignC">商品コード</th>
+                <th class="alignC">商品名</th>
+                <th class="alignC">単価</th>
+                <th class="alignC">数量</th>
+                <!--{* XXX 購入小計と誤差が出るためコメントアウト
                         <th>小計</th>
                         *}-->
-                    </tr>
-                    <!--{foreach item=item from=$shippingItem.shipment_item}-->
-                        <tr>
-                            <td><!--{$item.productsClass.product_code|h}--></td>
-                            <td><!--{* 商品名 *}--><!--{$item.productsClass.name|h}--><br />
-                                <!--{if $item.productsClass.classcategory_name1 != ""}-->
-                                    <!--{$item.productsClass.class_name1}-->：<!--{$item.productsClass.classcategory_name1}--><br />
-                                <!--{/if}-->
-                                <!--{if $item.productsClass.classcategory_name2 != ""}-->
-                                    <!--{$item.productsClass.class_name2}-->：<!--{$item.productsClass.classcategory_name2}-->
-                                <!--{/if}-->
-                            </td>
-                            <td class="alignR">
-                                <!--{$item.price|sfCalcIncTax:$tpl_arrOrderData.order_tax_rate:$tpl_arrOrderData.order_tax_rule|n2s}-->円
-                            </td>
-                            <td class="alignC"><!--{$item.quantity}--></td>
-                            <!--{* XXX 購入小計と誤差が出るためコメントアウト
+            </tr>
+            <!--{foreach item=item from=$shippingItem.shipment_item}-->
+            <tr>
+                <td><!--{$item.productsClass.product_code|h}--></td>
+                <td><!--{* 商品名 *}--><!--{$item.productsClass.name|h}--><br />
+                    <!--{if $item.productsClass.classcategory_name1 != ""}-->
+                    <!--{$item.productsClass.class_name1}-->：<!--{$item.productsClass.classcategory_name1}--><br />
+                    <!--{/if}-->
+                    <!--{if $item.productsClass.classcategory_name2 != ""}-->
+                    <!--{$item.productsClass.class_name2}-->：<!--{$item.productsClass.classcategory_name2}-->
+                    <!--{/if}-->
+                </td>
+                <td class="alignR">
+                    <!--{$item.price|sfCalcIncTax:$tpl_arrOrderData.order_tax_rate:$tpl_arrOrderData.order_tax_rule|n2s}-->円
+                </td>
+                <td class="alignC"><!--{$item.quantity}--></td>
+                <!--{* XXX 購入小計と誤差が出るためコメントアウト
                             <td class="alignR"><!--{$item.total_inctax|n2s}-->円</td>
                             *}-->
-                        </tr>
-                    <!--{/foreach}-->
-                </table>
+            </tr>
+            <!--{/foreach}-->
+        </table>
+        <!--{/if}-->
+
+
+        <table summary="お届け先" class="delivname">
+            <col width="30%" />
+            <col width="70%" />
+            <tbody>
+            <tr>
+                <th class="alignL">お名前 KIKIKI</th>
+                <td>
+                    <!--{$shippingItem.shipping_name01|h}-->&nbsp;
+                    <!--{$shippingItem.shipping_name02|h}--></td>
+            </tr>
+            <tr>
+                <th class="alignL">お名前(フリガナ)</th>
+                <td><!--{$shippingItem.shipping_kana01|h}-->&nbsp;<!--{$shippingItem.shipping_kana02|h}--></td>
+            </tr>
+            <tr>
+                <th class="alignL">会社名</th>
+                <td><!--{$shippingItem.shipping_company_name|h}--></td>
+            </tr>
+            <!--{if $smarty.const.FORM_COUNTRY_ENABLE}-->
+            <tr>
+                <th class="alignL">国</th>
+                <td><!--{$arrCountry[$shippingItem.shipping_country_id]|h}--></td>
+            </tr>
+            <tr>
+                <th class="alignL">ZIPCODE</th>
+                <td><!--{$shippingItem.shipping_zipcode|h}--></td>
+            </tr>
             <!--{/if}-->
-            <table summary="お届け先" class="delivname">
-                <col width="30%" />
-                <col width="70%" />
-                <tbody>
-                    <tr>
-                        <th class="alignL">お名前</th>
-                        <td><!--{$shippingItem.shipping_name01|h}-->&nbsp;<!--{$shippingItem.shipping_name02|h}--></td>
-                    </tr>
-                    <tr>
-                        <th class="alignL">お名前(フリガナ)</th>
-                        <td><!--{$shippingItem.shipping_kana01|h}-->&nbsp;<!--{$shippingItem.shipping_kana02|h}--></td>
-                    </tr>
-                    <tr>
-                        <th class="alignL">会社名</th>
-                        <td><!--{$shippingItem.shipping_company_name|h}--></td>
-                    </tr>
-                    <!--{if $smarty.const.FORM_COUNTRY_ENABLE}-->
-                    <tr>
-                        <th class="alignL">国</th>
-                        <td><!--{$arrCountry[$shippingItem.shipping_country_id]|h}--></td>
-                    </tr>
-                    <tr>
-                        <th class="alignL">ZIPCODE</th>
-                        <td><!--{$shippingItem.shipping_zipcode|h}--></td>
-                    </tr>
+            <tr>
+                <th class="alignL">郵便番号</th>
+                <td>〒<!--{$shippingItem.shipping_zip01}-->-<!--{$shippingItem.shipping_zip02}--></td>
+            </tr>
+            <tr>
+                <th class="alignL">住所</th>
+                <td><!--{$arrPref[$shippingItem.shipping_pref]}--><!--{$shippingItem.shipping_addr01|h}--><!--{$shippingItem.shipping_addr02|h}--></td>
+            </tr>
+            <tr>
+                <th class="alignL">電話番号</th>
+                <td><!--{$shippingItem.shipping_tel01}-->-<!--{$shippingItem.shipping_tel02}-->-<!--{$shippingItem.shipping_tel03}--></td>
+            </tr>
+            <tr>
+                <th class="alignL">FAX番号</th>
+                <td>
+                    <!--{if $shippingItem.shipping_fax01 > 0}-->
+                    <!--{$shippingItem.shipping_fax01}-->-<!--{$shippingItem.shipping_fax02}-->-<!--{$shippingItem.shipping_fax03}-->
                     <!--{/if}-->
-                    <tr>
-                        <th class="alignL">郵便番号</th>
-                        <td>〒<!--{$shippingItem.shipping_zip01}-->-<!--{$shippingItem.shipping_zip02}--></td>
-                    </tr>
-                    <tr>
-                        <th class="alignL">住所</th>
-                        <td><!--{$arrPref[$shippingItem.shipping_pref]}--><!--{$shippingItem.shipping_addr01|h}--><!--{$shippingItem.shipping_addr02|h}--></td>
-                    </tr>
-                    <tr>
-                        <th class="alignL">電話番号</th>
-                        <td><!--{$shippingItem.shipping_tel01}-->-<!--{$shippingItem.shipping_tel02}-->-<!--{$shippingItem.shipping_tel03}--></td>
-                    </tr>
-                    <tr>
-                        <th class="alignL">FAX番号</th>
-                        <td>
-                            <!--{if $shippingItem.shipping_fax01 > 0}-->
-                                <!--{$shippingItem.shipping_fax01}-->-<!--{$shippingItem.shipping_fax02}-->-<!--{$shippingItem.shipping_fax03}-->
-                            <!--{/if}-->
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="alignL">お届け日</th>
-                        <td><!--{$shippingItem.shipping_date|default:'指定なし'|h}--></td>
-                    </tr>
-                    <tr>
-                        <th class="alignL">お届け時間</th>
-                        <td><!--{$shippingItem.shipping_time|default:'指定なし'|h}--></td>
-                    </tr>
-                </tbody>
-            </table>
+                </td>
+            </tr>
+            <tr>
+                <th class="alignL">お届け日</th>
+                <td><!--{$shippingItem.shipping_date|default:'指定なし'|h}--></td>
+            </tr>
+            <tr>
+                <th class="alignL">お届け時間</th>
+                <td><!--{$shippingItem.shipping_time|default:'指定なし'|h}--></td>
+            </tr>
+            </tbody>
+        </table>
         <!--{/foreach}-->
         <!--{/if}-->
 
