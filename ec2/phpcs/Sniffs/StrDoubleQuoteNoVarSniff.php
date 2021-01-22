@@ -1,25 +1,15 @@
 <?php
 /**
- * Checks that two strings are not concatenated together; suggests using one string instead.
+ * Checks use of double quotes in strings that have no variable expansion
  *
- * @author    Greg Sherwood <gsherwood@squiz.net>
- * @copyright 2006-2015 Squiz Pty Ltd (ABN 77 084 670 600)
- * @license   https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD Licence
+ * @author    Camilo Uran <camilo.pico@scuti.asia>
  */
-
-namespace PHP_CodeSniffer\Standards\Generic\Sniffs\Strings;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
 class StrDoubleQuoteNoVarSniff implements Sniff
 {
-    public $supportedTokenizers = [
-        'PHP',
-    ];
-
-    public $allowMultiline = false;
-
     public function register()
     {
         return [
