@@ -41,6 +41,14 @@ return [
             'btn_details' => '詳細',
             'product_information' => '商品情報',
         ],
+        'order_detail' => [
+            'order_date' => '購入日時',
+            'order_number' => '注文番号',
+            'order_payment' => 'お支払い方法',
+            'order_status' => 'ご注文状況',
+            'delivery_date' => 'お届け日',
+            'delivery_time' => 'お届け時間'
+        ],
     ],
     'test' => 'テスト',
 ];

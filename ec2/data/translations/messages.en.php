@@ -41,6 +41,14 @@ return [
             'btn_details' => 'See details',
             'product_information' => 'Product information',
         ],
+        'order_detail' => [
+            'order_date' => 'Order date',
+            'order_number' => 'Order code',
+            'order_payment' => 'Order payment',
+            'order_status' => 'Order status',
+            'delivery_date' => 'Delivery date',
+            'delivery_time' => 'Delivery time'
+        ],
     ],
     'test' => 'Translation test',
 ];
