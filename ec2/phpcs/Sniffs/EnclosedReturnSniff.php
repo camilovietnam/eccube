@@ -1,6 +1,6 @@
 <?php
 /**
- * Verify spaces after commas in call to array method
+ * Verify a return value is not enclosed in parenthesis
  *
  * @author    Camilo Uran <camilo.pico@scuti.asia>
  */

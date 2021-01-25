@@ -3,5 +3,7 @@
     <description>Custom Standard rules for Merchview project</description>
     <rule ref="Zend" >
         <exclude name="Zend.NamingConventions.ValidVariableName"/>
+        <exclude name="Zend.NamingConventions.ValidVariableName"/>
+        <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
     </rule>
 </ruleset>
