@@ -49,7 +49,8 @@
         "setasign/fpdi-fpdf": "1.6",
         "silverorange/mdb2": "2.5.2-b.5",
         "smarty/smarty": "*",
-        "symfony/translation": "^2.8"
+        "symfony/translation": "^2.8",
+        "doctrine/migrations": "^2.3.2"
     },
     "autoload": {
         "classmap": [
@@ -59,6 +60,7 @@
     },
     "scripts": {
         "phpcs": "data/vendor/bin/phpcs -p --standard=./phpcs",
-        "phpunit": "data/vendor/bin/phpunit tests"
+        "phpunit": "data/vendor/bin/phpunit tests",
+        "migrate": "data/vendor/bin/doctrine-migrations"
     }
 }
