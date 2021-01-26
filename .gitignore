@@ -15,3 +15,6 @@ ec2/data/vendor
 
 # Ignore temporary installation files
 ec2/html/install/temp
+
+# Ignore mysql data
+mysql
