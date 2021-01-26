@@ -1,9 +1,6 @@
 # Ignore phpstorm settings
 .idea
 
-# Ignore persisting mysql data
-mysql/*
-
 # Ignore ECCUBE cache
 ec2/data/cache/*
 
