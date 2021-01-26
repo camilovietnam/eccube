@@ -38,6 +38,6 @@ RUN echo "alias apacherestart='service apache2 restart'" >> ~/.bashrc \
     && echo "alias rrr='. ~/.bashrc'" >> ~/.bashrc \
     && echo "alias sys='systemctl'" >> ~/.bashrc \
     && echo "alias x='exit'" >> ~/.bashrc \
-    && echo 'alias xdebugoff='"'"'sed -i "s/zend_extension/# zend_extension/g" /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini'"'"' ' >> ~/.bashrc
-    && echo 'alias xdebugon='"'"'sed -i "s/# zend_extension/zend_extension/g" /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini'"'"' ' >> ~/.bashrc
+    && echo 'alias xdebugoff='"'"'sed -i "s/zend_extension/# zend_extension/g" /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini'"'"' ' >> ~/.bashrc \
+    && echo 'alias xdebugon='"'"'sed -i "s/# zend_extension/zend_extension/g" /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini'"'"' ' >> ~/.bashrc \
     && . ~/.bashrc
