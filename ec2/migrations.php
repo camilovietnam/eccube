@@ -1,13 +1,19 @@
 <?php
 
 return [
-    'name' => 'EC-Cube 2 Migrations',
-    'migrations_namespace' => 'MyProject\Migrations',
-    'table_name' => 'doctrine_migration_versions',
-    'column_name' => 'version',
-    'column_length' => 14,
-    'executed_at_column_name' => 'executed_at',
-    'migrations_directory' => '/data/migrations',
+    'table_storage' => [
+        'table_name' => 'doctrine_migration_versions',
+        'version_column_name' => 'version',
+        'version_column_length' => 1024,
+        'executed_at_column_name' => 'executed_at',
+        'execution_time_column_name' => 'execution_time',
+    ],
+
+    'migrations_paths' => [
+        'MyProject\Migrations' => './data/migrations'
+    ],
+
     'all_or_nothing' => false,
     'check_database_platform' => true,
+    'organize_migrations' => 'none',
 ];
