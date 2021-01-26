@@ -5,7 +5,7 @@ define('ROOT_URLPATH', '/');
 define('DOMAIN_NAME', '');
 define('DB_TYPE', 'mysqli');
 define('DB_USER', 'root');
-define('DB_PASSWORD', '123456');
+define('DB_PASSWORD', '123');
 define('DB_SERVER', 'eccube_db');
 define('DB_NAME', 'eccube_db');
 define('DB_PORT', '3306');
