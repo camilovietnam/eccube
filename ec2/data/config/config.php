@@ -13,7 +13,7 @@ define('DB_PORT', '3306');
 define('ADMIN_DIR', 'admin/');
 define('ADMIN_FORCE_SSL', FALSE);
 define('ADMIN_ALLOW_HOSTS', 'a:0:{}');
-define('AUTH_MAGIC', 'bevourialougaitresaeliofrupuuouphaehougi');
+define('AUTH_MAGIC', 'poufraijaeraislegiowraitoujiotifrujoujia');
 define('PASSWORD_HASH_ALGOS', 'sha256');
 define('MAIL_BACKEND', 'smtp');
 define('SMTP_HOST', '');
