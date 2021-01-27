@@ -24,7 +24,7 @@ class MethodNameContainsNumbersSniff implements Sniff
         }
 
         if (preg_match('/\d/',$methodName) === 1){
-            $warning = 'Method name "$methodName" contains numbers but this is discouraged';
+            $warning = "Method name '$methodName' contains numbers but this is discouraged";
             $phpcsFile->addWarning($warning, $stackPtr, 'ContainsNumbers');
         }
     }
