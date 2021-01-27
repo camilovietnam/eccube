@@ -25,6 +25,7 @@
 
 <link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/new_header.css">
 <link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/pgw3jgq.css">
+<script src="<!--{$TPL_URLPATH}-->js/header.js"></script>
 
 <div>
     <header class="header">
@@ -33,26 +34,22 @@
                 <img src="<!--{$TPL_URLPATH}-->img/common/icon_search.svg" alt="Search">
             </a>
         </div>
-
         <div class="searchClose">
             <a href="#">
                 <img src="<!--{$TPL_URLPATH}-->img/common/icon_close.svg" alt="Search">
             </a>
         </div>
-
         <h1>
             <a href="#">
                 <img src="<!--{$TPL_URLPATH}-->img/common/hdr_logo.svg" alt="Merch View"
             </a>
         </h1>
-
         <div class="hdrMenu">
             <div class="favorite">
                 <a href="#">
                     <img src="<!--{$TPL_URLPATH}-->img/common/icon_fav.svg" alt="">
                 </a>
             </div>
-
             <div class="cart">
                 <a href="#">
                     <img src="<!--{$TPL_URLPATH}-->img/common/icon_cart.svg" alt="">
@@ -61,26 +58,48 @@
                     2
                 </p>
             </div>
-
             <div class="login">
                 <a href="#">
                     Log in
                 </a>
             </div>
-
             <a id="menuButton" href="javascript:void(0);"><span></span><span></span><span></span></a>
         </div>
     </header>
+    <div id="spMenu">
+        <div class="spMenuInr">
+            <ul class="spMenuBtn">
+                <li class="login"><a href="#">Log in</a></li>
+                <li class="favorite"><a href="#"><span>お気に入り</span></a></li>
+            </ul>
+            <div class="ftrNav">
+                <ul>
+                    <li><a href="#">サイトマップ</a></li>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">運営会社</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">特定商取引法に基づく表示</a></li>
+                    <li><a href="#">merchviewとは</a></li>
+                </ul>
+                <ul>
+                    <li class="contact">お問い合わせ</li>
+                    <li><a href="#">ユーザ用</a>　/　<a href="#">アーティスト用</a></li>
+                </ul>
+            </div>
+            <div class="ftrBtm">
+                <div class="ftrLogo"><img src="common/images/hdr_logo.svg" alt=""></div>
+                <p class="copyright">&copy; Merch View</p>
+            </div>
+        </div>
+    </div>
 </div>
 
+<!--{*I will remove this, keeping it only to remember how to check login:*}-->
 <div>
     <!--{if $tpl_login or $isLogin}-->
-        <form name="header_login_form" id="header_login_form" method="post" action="<!--{$smarty.const.HTTPS_URL}-->frontparts/login_check.php"<!--{if !$tpl_login}--> onsubmit="return eccube.checkLoginFormInputted('header_login_form')"<!--{/if}-->>
-            <input type="hidden" name="mode" value="login" />
-            <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
-            <input type="hidden" name="url" value="<!--{$smarty.server.REQUEST_URI|h}-->" />
-        </form>
+
     <!--{/if}-->
 </div>
+
 <!--{/strip}-->
 <!--▲HEADER-->
