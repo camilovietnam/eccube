@@ -1,0 +1,112 @@
+
+/* ////////////////////////////////////////////////////////////////////////////////
+
+	footer
+
+//////////////////////////////////////////////////////////////////////////////// */
+
+footer {
+    border-top: #000 solid 2px;
+    padding: 60px 0;
+    margin-top: 200px;
+    color: black;
+}
+footer .ftrNav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #000 solid 1px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    letter-spacing: 0;
+}
+footer .ftrNav ul {
+    display: flex;
+}
+footer .ftrNav ul:last-child {
+    padding-left: 30px;
+    border-left: #000 solid 1px;
+}
+footer .ftrNav li {
+    margin-right: 25px;
+}
+footer .ftrNav li:last-child {
+    margin-right: 0;
+}
+footer .ftrNav li a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+footer .ftrBtm {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0;
+}
+footer .ftrBtm .ftrLogo {
+    width: 180px;
+}
+footer .ftrBtm .copyright {
+    font-size: 10px;
+}
+
+
+@media screen and (max-width: 812px) {
+
+    footer {
+        border-top: #000 solid 1px;
+        padding: 12vw 0;
+        margin-top: 25vw;
+    }
+    footer .ftrNav {
+        display: block;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 12vw;
+    }
+    footer .ftrNav ul {
+        flex-wrap: wrap;
+        font-size: 3vw;
+    }
+    footer .ftrNav ul:last-child {
+        padding-left: 0;
+        margin-top: 4vw;
+        padding-top: 6vw;
+        border-left: none;
+        border-top: #000 solid 1px;
+    }
+    footer .ftrNav li {
+        margin-right: 0;
+        margin-bottom: 2vw;
+        width: 50%;
+    }
+    footer .ftrNav ul:last-child li.contact {
+        width: 100%;
+        color: #000;
+    }
+    footer .ftrNav li a {
+        font-size: 3vw;
+    }
+
+    footer .ftrNav ul:last-child li {
+        margin-right: 0;
+        width: 100%;
+        display: flex;
+        color: #fff;
+    }
+    footer .ftrNav li:last-child a {
+        width: 42%;
+    }
+
+
+    footer .ftrBtm {
+        align-items: center;
+    }
+    footer .ftrBtm .ftrLogo {
+        width: 32vw;
+    }
+    footer .ftrBtm .copyright {
+        font-size: 2.6vw;
+    }
+}

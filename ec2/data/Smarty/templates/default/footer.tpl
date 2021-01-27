@@ -20,58 +20,30 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *}-->
 
-<style>
-    #footer {
-        background: black;
-        color: white;
-    }
-
-    div.footer-links {
-        font-size: xx-small;
-    }
-
-    div.footer-links h1{
-        font-size: xx-large;
-    }
-
-    div.footer-links .row {
-        margin: 20px auto;
-    }
-
-    div#copyright {
-        text-align: center;
-    }
-</style>
 <!--▼FOOTER-->
-<!--{strip}-->
-<div id="footer_wrap">
-    <div id="footer" class="clearfix">
-        <div class="footer-links">
-            <div class="row justify-content-center">
-                <div class="col-2">当サイトについて</div>
-                <div class="col-2">プライバシーポリシー </div>
-                <div class="col-2">特定商取引法に基づく表記 </div>
-                <div class="col-2">お問い合わせ</div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h1>
-                        <!--{$arrSiteInfo.shop_name|h}-->
-                    </h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div id="copyright">Copyright ©
-                        &nbsp;<!--{if $smarty.const.RELEASE_YEAR != $smarty.now|date_format:"%Y"}--><!--{$smarty.const.RELEASE_YEAR}-->-<!--{/if}--><!--{$smarty.now|date_format:"%Y"}-->
-                        &nbsp;<!--{$arrSiteInfo.shop_name_eng|default:$arrSiteInfo.shop_name|h}--> All rights reserved.
-                    </div>
-                </div>
-            </div>
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/footer.css">
 
+<!--{strip}-->
+<footer>
+    <div class="contentWrap">
+        <div class="ftrNav">
+            <ul>
+                <li><a href="#">merchviewとは</a></li>
+                <li><a href="#">よくある質問・お問い合わせ</a></li>
+                <li><a href="#">特定商取引法に基づく表示</a></li>
+                <li><a href="#">プライバシーポリシー</a></li>
+            </ul>
+            <ul>
+                <li class="contact">お問い合わせ</li>
+                <li><a href="#">ユーザ用</a>　/　<a href="#">アーティスト用</a></li>
+            </ul>
         </div>
 
+        <div class="ftrBtm">
+            <div class="ftrLogo"><img src="<!--{$TPL_URLPATH}-->img/common/hdr_logo.svg" alt=""></div>
+            <p class="copyright">&copy; Merch View</p>
+        </div>
     </div>
-</div>
+</footer>
 <!--{/strip}-->
 <!--▲FOOTER-->
