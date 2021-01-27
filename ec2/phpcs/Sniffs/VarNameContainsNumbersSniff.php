@@ -21,7 +21,7 @@ class VarNameContainsNumbersSniff implements Sniff
         $varName     = ltrim($tokens[$stackPtr]['content'], '$');
 
         if (preg_match('|\d|', $varName) === 1) {
-            $warning = 'Member variable "$varName" contains numbers but this is discouraged';
+            $warning = "Member variable '\$$varName' contains numbers but this is discouraged";
             $phpcsFile->addWarning($warning, $stackPtr, 'MemberVarContainsNumbers');
         }
     }
