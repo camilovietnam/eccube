@@ -23,7 +23,8 @@
 <!--▼HEADER-->
 <!--{strip}-->
 
-<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/new_header.css">
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/ress.min.css">
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/header.css">
 <link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/pgw3jgq.css">
 <script src="<!--{$TPL_URLPATH}-->js/header.js"></script>
 
@@ -92,6 +93,44 @@
             </div>
         </div>
     </div>
+
+    <div id="search">
+        <div class="searchInr">
+            <div class="searchBox">
+                <div class="searchForm">
+                    <input type="text" placeholder="キーワードからさがす">
+                    <input type="submit" value="Search">
+                </div>
+                <div class="searchKeyword">
+                    <p class="searchTtl">人気のキーワード</p>
+                    <ul>
+                        <li><a href="#">#HIPHOP</a></li>
+                        <li><a href="#">#アイドル</a></li>
+                        <li><a href="#">#フジロック</a></li>
+                        <li><a href="#">#FES</a></li>
+                        <li><a href="#">#スウェット</a></li>
+                        <li><a href="#">#T-Shirt</a></li>
+                        <li><a href="#">#キャップ</a></li>
+                        <li><a href="#">#アクセサリー</a></li>
+                        <li><a href="#">#Bag</a></li>
+                        <li><a href="#">#タオル</a></li>
+                    </ul>
+                </div>
+                <ul class="searchMenu">
+                    <li><a href="#">アーティストからさがす<span>Artist Search</span></a></li>
+                    <li><a href="#">新着商品<span>New Arrival</span></a></li>
+                </ul>
+                <div class="feature">
+                    <p class="searchTtl">Featured</p>
+                    <ul>
+                        <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/feature01.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/feature02.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <!--{*I will remove this, keeping it only to remember how to check login:*}-->

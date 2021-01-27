@@ -430,6 +430,9 @@ ul { list-style: none;}
 	height: 100%;
 	z-index: 9990;
     background-image: linear-gradient(230deg, #C26E81 0%, #0630FF 80%);
+	text-align: left;
+	letter-spacing: 0;
+	color: black;
 }
 #search .searchInr {
 	width: 100%;
@@ -517,7 +520,7 @@ ul { list-style: none;}
     font-size: 1.7vh;
     font-weight: bold;
     padding: 1.5vh 0;
-    background: url(../images/arrow02.svg) no-repeat right center;
+    background: url(../img/common/arrow02.svg) no-repeat right center;
     background-size: 20px;
 }
 #search .searchMenu li a span {
