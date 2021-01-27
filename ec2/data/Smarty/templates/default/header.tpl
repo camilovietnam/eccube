@@ -88,7 +88,7 @@
                 </ul>
             </div>
             <div class="ftrBtm">
-                <div class="ftrLogo"><img src="common/images/hdr_logo.svg" alt=""></div>
+                <div class="ftrLogo"><img src="<!--{$TPL_URLPATH}-->img/common/hdr_logo.svg" alt=""></div>
                 <p class="copyright">&copy; Merch View</p>
             </div>
         </div>
@@ -133,7 +133,7 @@
 
 </div>
 
-<!--{*I will remove this, keeping it only to remember how to check login:*}-->
+<!--{*I will remove this later, I'm keeping it only to remember how to check login:*}-->
 <div>
     <!--{if $tpl_login or $isLogin}-->
 
