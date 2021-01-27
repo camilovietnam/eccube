@@ -22,210 +22,123 @@
 
 <!--▼HEADER-->
 <!--{strip}-->
-<style>
-    #header {
-        margin-top : 20px;
-    }
 
-    div.search-left {
-        background: black;
-        color: white;
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-        height: 25px;
-        width: 50%;
-        float: left;
-        display: inline-block;
-    }
-    div.search-left select{
-        background: transparent;
-        color: white;
-        height: 25px;
-        border: none;
-        outline: 0;
-        width: 100%;
-        padding-left: 3px;
-    }
-    div.search-left option {
-        color: black;
-    }
-    div.search-right {
-        height: 25px;
-        background: #f6f6f6;
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
-        float: right;
-        display: inline;
-        width: 50%;
-        padding-top: 3px;
-    }
-    div.search-right input {
-        background: transparent;
-        border: none;
-        outline: none;
-        width: 80%;
-    }
-    div.search-right .search-icon {
-        display: inline-block;
-        padding-top: 5px;
-    }
-    .link-item {
-        color: black;
-    }
-
-    .link-item.shopping-cart {
-        background-color: #F8F8F8;
-        border-radius: 9999px;
-        padding: 3px 0 0 5px;
-    }
-
-    div.cart-left, div.cart-right {
-        display: inline-block;
-    }
-
-    div.cart-left {
-        float: left;
-    }
-
-    .badge {
-        display: inline-block;
-        border-radius: 99999px;
-        box-sizing: border-box;
-        padding: 5px;
-        height: 17px;
-        font-size: 10px;
-        line-height: 0.7;
-        vertical-align: top;
-        color: #fff;
-        text-align: left;
-        white-space: nowrap;
-        background-color: #DE5D50;
-    }
-
-    div.logo h1 {
-        font-size: large;
-        color: black;
-        font-weight: bold;
-    }
-
-    div.col-links {
-        padding-top: 8px;
-        font-size: smaller;
-    }
-
-    div.col-links .col-4 {
-        margin: 0;
-        padding: 0;
-    }
-
-    .col-links .link-item span {
-        margin-left:  3px;
-    }
-
-    .link_text a, .link-text a:link, .link-text a:active, a:visited{
-        color: black;
-    }
-
-</style>
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/ress.min.css">
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/header.css">
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/pgw3jgq.css">
+<script src="<!--{$TPL_URLPATH}-->js/header.js"></script>
 
 <div>
-    <!--{if $tpl_login or $isLogin}-->
-        <form name="header_login_form" id="header_login_form" method="post" action="<!--{$smarty.const.HTTPS_URL}-->frontparts/login_check.php"<!--{if !$tpl_login}--> onsubmit="return eccube.checkLoginFormInputted('header_login_form')"<!--{/if}-->>
-            <input type="hidden" name="mode" value="login" />
-            <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
-            <input type="hidden" name="url" value="<!--{$smarty.server.REQUEST_URI|h}-->" />
-        </form>
-    <!--{/if}-->
-</div>
-<div id="header_wrap">
-    <div id="header" class="clearfix">
-        <div class="container-fluid navi">
-            <div class="row">
-                <div class="col-12 col-md-4 col-search">
-                    <div class="row">
-                        <div class="offset-3 col-6 offset-md-0 col-md-12 justify-content-center">
-                            <div class="search-left">
-                                <select name="category-id" class="category-id">
-                                    <option value="">Tất cả sản phẩm</option>
-                                    <option value="1">Gelato</option>
-                                    <option value="3">　Món tráng miệng ngon</option>
-                                    <option value="4">　　CUBE</option>
-                                    <option value="8">　　　ABC</option>
-                                    <option value="12">Test</option>
-                                    <option value="5">Bánh mì kẹp kem</option>
-                                    <option value="6">　Trái cây</option>
-                                    <option value="2">Đồng Hồ</option>
-                                    <option value="11">　Boy London</option
-                                    <option value="10">　Julius</option>
-                                    <option value="9">　Latem</option>
-                                    <option value="7">Điện thoại</option>
-                                </select>
-                            </div>
-                            <div class="search-right">
-                                <input type="text" placeholder="Nhập từ khóa">
-                                <div class="search-icon">
-                                    <span class="fas fa-search"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <header class="header">
+        <div class="searchIcon">
+            <a href="#">
+                <img src="<!--{$TPL_URLPATH}-->img/common/icon_search.svg" alt="Search">
+            </a>
+        </div>
+        <div class="searchClose">
+            <a href="#">
+                <img src="<!--{$TPL_URLPATH}-->img/common/icon_close.svg" alt="Search">
+            </a>
+        </div>
+        <h1>
+            <a href="#">
+                <img src="<!--{$TPL_URLPATH}-->img/common/hdr_logo.svg" alt="Merch View"
+            </a>
+        </h1>
+        <div class="hdrMenu">
+            <div class="favorite">
+                <a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/common/icon_fav.svg" alt="">
+                </a>
+            </div>
+            <div class="cart">
+                <a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/common/icon_cart.svg" alt="">
+                </a>
+                <p class="num">
+                    2
+                </p>
+            </div>
+            <div class="login">
+                <a href="#">
+                    Log in
+                </a>
+            </div>
+            <a id="menuButton" href="javascript:void(0);"><span></span><span></span><span></span></a>
+        </div>
+    </header>
+    <div id="spMenu">
+        <div class="spMenuInr">
+            <ul class="spMenuBtn">
+                <li class="login"><a href="#">Log in</a></li>
+                <li class="favorite"><a href="#"><span>お気に入り</span></a></li>
+            </ul>
+            <div class="ftrNav">
+                <ul>
+                    <li><a href="#">サイトマップ</a></li>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">運営会社</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">特定商取引法に基づく表示</a></li>
+                    <li><a href="#">merchviewとは</a></li>
+                </ul>
+                <ul>
+                    <li class="contact">お問い合わせ</li>
+                    <li><a href="#">ユーザ用</a>　/　<a href="#">アーティスト用</a></li>
+                </ul>
+            </div>
+            <div class="ftrBtm">
+                <div class="ftrLogo"><img src="<!--{$TPL_URLPATH}-->img/common/hdr_logo.svg" alt=""></div>
+                <p class="copyright">&copy; Merch View</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="search">
+        <div class="searchInr">
+            <div class="searchBox">
+                <div class="searchForm">
+                    <input type="text" placeholder="キーワードからさがす">
+                    <input type="submit" value="Search">
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="logo text-center">
-                        <h1>
-                            <a href="/">
-                                <!--{$arrSiteInfo.shop_name|h}-->
-                            </a>
-                        </h1>
-                    </div>
+                <div class="searchKeyword">
+                    <p class="searchTtl">人気のキーワード</p>
+                    <ul>
+                        <li><a href="#">#HIPHOP</a></li>
+                        <li><a href="#">#アイドル</a></li>
+                        <li><a href="#">#フジロック</a></li>
+                        <li><a href="#">#FES</a></li>
+                        <li><a href="#">#スウェット</a></li>
+                        <li><a href="#">#T-Shirt</a></li>
+                        <li><a href="#">#キャップ</a></li>
+                        <li><a href="#">#アクセサリー</a></li>
+                        <li><a href="#">#Bag</a></li>
+                        <li><a href="#">#タオル</a></li>
+                    </ul>
                 </div>
-                <div class="col-12 col-md-4 col-links">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="link-item">
-                                <span class="fas fa-user fa-heart"></span>
-                                <span class="link-text">
-                                         <!--{'public.top.favorites'|trans}-->
-                                    </span>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="link-item">
-                                <!--{if $tpl_login or $isLogin}-->
-                                    <span class="fas fa-sign-out-alt"></span>
-                                    <span class="link-text">
-                                            <a href="/mypage" onclick="eccube.fnFormModeSubmit('header_login_form', 'logout', '', ''); return false;">
-                                                <!--{'common.logout'|trans}-->
-                                            </a>
-                                    </span>
-                                <!--{else}-->
-                                    <span class="fas fa-lock"></span>
-                                    <span class="link-text">
-                                        <a href="/mypage/login.php">
-                                            <!--{'common.login'|trans}-->
-                                        </a>
-                                    </span>
-                                <!--{/if}-->
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="link-item shopping-cart">
-                                <div class="cart-left">
-                                    <span class="fas fa-shopping-cart"></span>
-                                    <span class="badge">
-                                    0
-                                </span>
-                                </div>
-                                <div class="cart-right">
-                                    ₫ 0
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <ul class="searchMenu">
+                    <li><a href="#">アーティストからさがす<span>Artist Search</span></a></li>
+                    <li><a href="#">新着商品<span>New Arrival</span></a></li>
+                </ul>
+                <div class="feature">
+                    <p class="searchTtl">Featured</p>
+                    <ul>
+                        <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/feature01.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/feature02.jpg" alt=""></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
+
+<!--{*I will remove this later, I'm keeping it only to remember how to check login:*}-->
+<div>
+    <!--{if $tpl_login or $isLogin}-->
+
+    <!--{/if}-->
+</div>
+
 <!--{/strip}-->
 <!--▲HEADER-->
