@@ -37,11 +37,5 @@ class FunctionBracketNewLineSniff implements Sniff
             $error = 'Add a space between the closing parenthesis and the opening brace';
             $phpcsFile->addError($error, $stackPtr, 'SpaceBetweenParenthesisBrace');
         }
-
-        if ($tokens[$openingParenthesis]['line'] === $tokens[$closingParenthesis]['line']
-            && $tokens[$closingParenthesis]['line'] === $tokens[$openingBracket]['line']) {
-            $error = 'Opening brace should be on a new line';
-            $phpcsFile->addError($error, $stackPtr, 'OpeningBraceNewLine');
-        }
     }
 }
