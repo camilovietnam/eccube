@@ -20,307 +20,48 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *}-->
 
+<script src="<!--{$TPL_URLPATH}-->/js/top-page.js"></script>
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/top_page.css">
+
 <!--{strip}-->
 
-<style>
-    .splide__slide img {
-        width: 100%;
-    }
-</style>
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+<div id="mainVisual">
+    <div class="mvLeft">
+        <div class="ttlnSnap">
+            <div class="title"><h1><img src="<!--{$TPL_URLPATH}-->img/common/main_logo.svg" alt="Merch View"></h1></div>
+            <div class="snap">
+                <a href="#" style="background-image: url(<!--{$TPL_URLPATH}-->img/common/mv_snap.jpg);">
+                    <p class="tag">Snap</p>
+                    <p class="itemName">Tracks Long T-shirt “1969”</p>
+                </a>
+            </div>
+        </div>
 
-<script>
-  document.addEventListener( 'DOMContentLoaded', function () {
-    new Splide( '.splide', {
-      type: 'loop',
-      autoplay: true,
-      interval: 3000,
-      pauseOnHover: true,
-      lazyLoad: true
-    } ).mount();
-  } );
-</script>
-
-<div class="splide">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-                <img src="upload/save_image/slide_1.jpg" alt="">
-            </li>
-            <li class="splide__slide">
-                <img src="upload/save_image/slide_2.jpg" alt="">
-            </li>
-            <li class="splide__slide">
-                <img src="upload/save_image/slide_3.jpg" alt="">
-            </li>
-        </ul>
+        <div class="mvNews">
+            <h5>News</h5>
+            <p><a href="#">ウィンターセール開催のお知らせ</a></p>
+            <a href="#" class="arrow"></a>
+        </div>
     </div>
-</div>
-
-<style>
-    .new-products .row {
-        color: black;
-        margin: auto;
-        margin-top: 50px;
-        padding: 10px;
-    }
-    .new-products .col {
-        width: 100%;
-        height: 100%;
-    }
-    .new-products .item-1 {
-        padding-top: 30px;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    .new-products .item-1 hr {
-        color: black;
-        background: black;
-        width: 20px;
-        border: 1px solid black;
-    }
-    .new-products .item-1 button {
-        margin-top: 10px;
-        background: black;
-        color: white;
-    }
-    .new-products .col h2 {
-        font-weight: bold;
-    }
-    .new-products .product-name {
-        font-weight: bold;
-    }
-    .new-products img {
-        width: 100%;
-    }
-</style>
-
-<div class="container">
-    <div class="new-products">
-        <div class="row">
-            <div class="col item-1">
-                <div>
-                    <h2>New Items</h2>
-                </div>
-                <hr>
-                <div>
-                    新着商品
-                </div>
-                <div>
-                    <button>More</button>
-                </div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Delicious Food</div>
-                <div>￥1500</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Bread</div>
-                <div>￥600</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Cake</div>
-                <div>￥1100</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Wine</div>
-                <div>￥3500</div>
-                <div>熊木杏里</div>
+    <div class="mvRight">
+        <div class="about">
+            <a href="#">
+                <p>About</p>
+                <div><img src="<!--{$TPL_URLPATH}-->img/common/main_logo.svg" alt="Merch View"></div>
+            </a>
+        </div>
+        <div class="pickup">
+            <p class="tag">Pick up</p>
+            <div class="pickupSlide">
+                <ul>
+                    <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/mv_pickup01.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/feature01.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/feature02.jpg" alt=""></a></li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
 
-<style>
-    .recent-products .row {
-        margin: auto;
-        color: black;
-        padding: 10px
-    }
-    .recent-products .col {
-        width: 100%;
-        height: 100%;
-    }
-    .recent-products .item-1 {
-        padding-top: 30px;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    .recent-products .item-1 hr {
-        color: black;
-        background: black;
-        width: 20px;
-        border: 1px solid black;
-    }
-    .recent-products .item-1 button {
-        margin-top: 10px;
-        background: black;
-        color: white;
-    }
-    .recent-products .col h2 {
-        font-weight: bold;
-    }
-    .recent-products .product-name {
-        font-weight: bold;
-    }
-    .recent-products img {
-        width: 100%;
-    }
-</style>
-
-<div class="container">
-    <div class="recent-products">
-        <div class="row">
-            <div class="col item-1">
-                <div>
-                    <h2>Recently seen</h2>
-                </div>
-                <hr>
-                <div>
-                    新着商品
-                </div>
-                <div>
-                    <button>More</button>
-                </div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Product X</div>
-                <div>￥650</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Product Y</div>
-                <div>￥850</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Product Z</div>
-                <div>￥999</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Product AA</div>
-                <div>￥123</div>
-                <div>熊木杏里</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-    .recommended-products .row {
-        color: black;
-        margin: auto;
-        padding: 10px
-    }
-    .recommended-products .col {
-        width: 100%;
-        height: 100%;
-    }
-    .recommended-products .item-1 {
-        padding-top: 30px;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    .recommended-products .item-1 hr {
-        color: black;
-        background: black;
-        width: 20px;
-        border: 1px solid black;
-    }
-    .recommended-products .item-1 button {
-        margin-top: 10px;
-        background: black;
-        color: white;
-    }
-    .recommended-products .col h2 {
-        font-weight: bold;
-    }
-    .recommended-products .product-name {
-        font-weight: bold;
-    }
-    .recommended-products img {
-        width: 100%;
-    }
-</style>
-
-<div class="container">
-    <div class="recommended-products">
-        <div class="row">
-            <div class="col item-1">
-                <div>
-                    <h2>Recommended</h2>
-                </div>
-                <hr>
-                <div>
-                    新着商品
-                </div>
-                <div>
-                    <button>More</button>
-                </div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Lunch</div>
-                <div>￥666</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Dinner</div>
-                <div>￥555</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Breakfast</div>
-                <div>￥300</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Appetizers</div>
-                <div>￥1025</div>
-                <div>熊木杏里</div>
-            </div>
-        </div>
-    </div>
-</div>
 <!--{/strip}-->
 

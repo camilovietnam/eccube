@@ -53,7 +53,7 @@
             <!--{/if}-->
             <!--{* ▲HEADER *}-->
 
-            <div id="container" class="clearfix">
+            <div id="container" class="body-container clearfix">
 
                 <!--{* ▼TOP COLUMN*}-->
                 <!--{if !empty($arrPageLayout.TopNavi)}-->

@@ -1,0 +1,311 @@
+
+/* ////////////////////////////////////////////////////////////////////////////////
+
+	Top page
+
+//////////////////////////////////////////////////////////////////////////////// */
+
+#mainVisual {
+    display: flex;
+    padding-top: 62px;
+    letter-spacing: 0;
+}
+
+#mainVisual .mvLeft {
+    background-image: linear-gradient(230deg, #F49582 0%, #C26E81 35%, #0630FF 70%);
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+#mainVisual .mvLeft .ttlnSnap {
+    display: flex;
+    height: 100%;
+}
+#mainVisual .mvLeft .title {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: #000 solid 2px;
+}
+#mainVisual .mvLeft .title h1 {
+    width: 58%;
+    line-height: 0;
+}
+#mainVisual .mvLeft .snap {
+    width: 50%;
+}
+#mainVisual .mvLeft .snap a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-decoration: none;
+}
+#mainVisual .mvLeft .snap .tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #0630FF;
+    padding: 6px 15px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    transform-origin: left top;
+    transform: translate(100%) rotate(90deg);
+}
+#mainVisual .mvLeft .snap .itemName {
+    position: absolute;
+    bottom: 4%;
+    left: 10%;
+    font-size: 14px;
+    white-space: nowrap;
+}
+#mainVisual .mvLeft .mvNews {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    border-right: #333 solid 1px;
+    position: relative;
+}
+#mainVisual .mvLeft .mvNews h5 {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    width: 60px;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    border-right: #333 solid 1px;
+}
+#mainVisual .mvLeft .mvNews p {
+    width: calc(100% - 90px);
+}
+#mainVisual .mvLeft .mvNews p a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+#mainVisual .mvLeft .mvNews .arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    background: url("../img/common/arrow.svg") no-repeat center center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+}
+
+#mainVisual .mvRight {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    border-left: #000 solid 2px;
+}
+#mainVisual .mvRight .about {
+    padding-top: 100%;
+    position: relative;
+}
+#mainVisual .mvRight .about a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0630FF;
+    color: #fff;
+    text-decoration: none;
+}
+#mainVisual .mvRight .about a p {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+}
+#mainVisual .mvRight .about a div {
+    width: 50%;
+}
+
+#mainVisual .mvRight .pickup {
+    padding-top: 100%;
+    position: relative;
+    border-top: #000 solid 2px;
+}
+#mainVisual .mvRight .pickup .tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #0630FF;
+    padding: 6px 15px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    transform-origin: left top;
+    transform: translate(100%) rotate(90deg);
+    color: #fff;
+}
+#mainVisual .mvRight .pickup .pickupSlide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#mainVisual .mvRight .pickup .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    width: auto;
+}
+#mainVisual .slick-dots li {
+    width: 10px;
+    height: 10px;
+}
+#mainVisual .slick-dots li button {
+    width: 10px;
+    height: 10px;
+    background: #E5E5E5;
+    border-radius: 50%;
+    text-indent: -9999px;
+}
+#mainVisual .slick-dots li.slick-active button {
+    background: #F49582;
+}
+#mainVisual .mvRight .pickup .slick-slide img {
+    width: 100%;
+}
+
+#reccomend,
+#checked {
+    padding-top: 100px;
+}
+#newItems {
+    padding-top: 60px;
+}
+#reccomend h2,
+#newItems h2,
+#checked h2 {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+}
+#reccomend h2.anim,
+#newItems h2.anim,
+#checked h2.anim {
+    transform: translateX(40px);
+}
+#reccomend h2.anim.on,
+#newItems h2.anim.on,
+#checked h2.anim.on {
+    transform: translateX(0);
+}
+
+
+@media screen and (max-width: 812px) {
+
+    #mainVisual {
+        display: block;
+        padding-top: 13.8vw;
+    }
+    #mainVisual .mvLeft {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    #mainVisual .mvLeft .title {
+        display: none;
+    }
+    #mainVisual .mvLeft .snap {
+        width: 100%;
+        height: 135vw;
+    }
+    #mainVisual .mvLeft .snap .tag {
+        padding: 1.5vw 3.5vw;
+        font-size: 2.8vw;
+    }
+    #mainVisual .mvLeft .snap .itemName {
+        font-size: 3vw;
+    }
+
+    #mainVisual .mvLeft .mvNews {
+        padding: 3vw 5vw;
+    }
+    #mainVisual .mvLeft .mvNews h5 {
+        width: 12vw;
+        font-size: 3.2vw;
+        letter-spacing: 0.05em;
+    }
+    #mainVisual .mvLeft .mvNews p {
+        width: calc(100% - 15vw);
+        padding-right: 8vw;
+    }
+    #mainVisual .mvLeft .mvNews p a {
+        font-size: 3vw;
+    }
+    #mainVisual .mvLeft .mvNews .arrow {
+        right: 5vw;
+        width: 6vw;
+        height: 6vw;
+    }
+
+
+    #mainVisual .mvRight {
+        width: 100%;
+        border-left: none;
+    }
+    #mainVisual .mvRight .about a p {
+        font-size: 4.8vw;
+        margin-bottom: 3vw;
+    }
+
+    #mainVisual .mvRight .pickup {
+        border-bottom: #000 solid 2px;
+    }
+    #mainVisual .mvRight .pickup .tag {
+        padding: 1.5vw 3.5vw;
+        font-size: 2.8vw;
+    }
+
+
+    #reccomend, #checked {
+        padding-top: 18vw;
+    }
+    #reccomend h2,
+    #newItems h2,
+    #checked h2 {
+        font-size: 6vw;
+        margin-bottom: 8vw;
+    }
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////
+
+	Custom code
+
+//////////////////////////////////////////////////////////////////////////////// */
+
+.body-container {
+    width: 100%!important;
+}
+
+.body-container #main_column.colnum1 {
+    width: 100%;
+}
+
+#main_column.colnum1 {
+    padding: 0;
+}
