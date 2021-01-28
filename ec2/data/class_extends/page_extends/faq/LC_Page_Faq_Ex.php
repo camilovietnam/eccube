@@ -1,4 +1,5 @@
-<!--{*
+<?php
+/*
  * This file is part of EC-CUBE
  *
  * Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
@@ -18,23 +19,38 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- *}-->
+ */
 
-<style>
-    h1 {
-        font-size: xxx-large;
+require_once CLASS_REALDIR . 'pages/faq/LC_Page_Faq.php';
+
+/**
+ * サイト概要のページクラス(拡張).
+ *
+ * LC_Page_Abouts をカスタマイズする場合はこのクラスを編集する.
+ *
+ * @package Page
+ * @author EC-CUBE CO.,LTD.
+ * @version $Id$
+ */
+class LC_Page_Faq_Ex extends LC_Page_Faq
+{
+    /**
+     * Page を初期化する.
+     *
+     * @return void
+     */
+    function init()
+    {
+        parent::init();
     }
 
-    .container-legal {
-        margin-top: 100px;
+    /**
+     * Page のプロセス.
+     *
+     * @return void
+     */
+    function process()
+    {
+        parent::process();
     }
-</style>
-
-<div class="container-fluid container-legal">
-    <div class="row">
-        <div class="col">
-            <h1>This is the legal page</h1>
-            <p>Replace the content of this file (Smarty/templates/default/legal/index.tpl) with your code.</p>
-        </div>
-    </div>
-</div>
+}

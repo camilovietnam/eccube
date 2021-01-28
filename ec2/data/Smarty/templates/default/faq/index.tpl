@@ -33,8 +33,8 @@
 <div class="container-fluid container-legal">
     <div class="row">
         <div class="col">
-            <h1>This is the legal page</h1>
-            <p>Replace the content of this file (Smarty/templates/default/legal/index.tpl) with your code.</p>
+            <h1>This is the FAQ page</h1>
+            <p>Replace the content of this file (Smarty/templates/default/faq/index.tpl) with your code.</p>
         </div>
     </div>
 </div>
