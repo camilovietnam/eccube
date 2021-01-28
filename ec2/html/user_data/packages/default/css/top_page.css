@@ -393,6 +393,90 @@
 
 /* ////////////////////////////////////////////////////////////////////////////////
 
+	Item list
+
+//////////////////////////////////////////////////////////////////////////////// */
+.itemList {
+    border-top: #000 solid 2px;
+    border-left: #000 solid 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.itemList li {
+    width: 25%;
+    box-sizing: border-box;
+    border-right: #000 solid 2px;
+    border-bottom: #000 solid 2px;
+    position: relative;
+}
+.itemList li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+
+.itemList li .itemThumb {
+    line-height: 0;
+}
+.itemList li .itemThumb img.anim {
+    transform: scale(0.8);
+}
+.itemList li .itemThumb img.anim.on {
+    transform: scale(1);
+}
+.itemList li .itemTxt {
+    border-top: #000 solid 2px;
+    padding: 20px 20px 60px;
+    font-size: 15px;
+}
+.itemList li .itemTxt .artistName {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.itemList li .itemTxt .itemName {
+    line-height: 1.7;
+}
+.itemList li .itemTxt .price {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+}
+.itemList li .itemTxt .price span {
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 812px) {
+
+    .itemList {
+        border-top: #000 solid 1px;
+        border-left: #000 solid 1px;
+    }
+    .itemList li {
+        width: 50%;
+        border-right: #000 solid 1px;
+        border-bottom: #000 solid 1px;
+    }
+    .itemList li .itemTxt {
+        border-top: #000 solid 1px;
+        padding: 3vw 3vw 14vw;
+        font-size: 3.2vw;
+    }
+    .itemList li .itemTxt .artistName {
+        margin-bottom: 2vw;
+    }
+    .itemList li .itemTxt .price {
+        bottom: 3vw;
+        left: 3vw;
+        font-size: 3.6vw;
+    }
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////
+
 	Custom code
 
 //////////////////////////////////////////////////////////////////////////////// */
@@ -415,4 +499,8 @@
 
 #reccomend h3 {
     font-weight: bold;
+}
+
+#newItems h2{
+    color: black;
 }

@@ -678,5 +678,95 @@
     <div class="moreBtn"><a href="#">More</a></div>
 </div>
 
+<div id="newItems">
+    <div class="contentWrap">
+        <h2 class="anim">New Items</h2>
+        <ul class="itemList">
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item01.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">向井太一</p>
+                        <p class="itemName">「SAVAGE」Hoodie</p>
+                        <p class="price">&yen;5,500 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item02.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">向井太一</p>
+                        <p class="itemName">Supplement Pouch</p>
+                        <p class="price">&yen;2,500 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item03.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">雨のパレード</p>
+                        <p class="itemName">Tracks Long T-shirt “Petrichor”（White）</p>
+                        <p class="price">&yen;3,870 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item04.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">向井太一</p>
+                        <p class="itemName">Supplement T-Shirt（Sweet pea）</p>
+                        <p class="price">&yen;7,500 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item05.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">向井太一</p>
+                        <p class="itemName">-Eau de toilette- Supplement</p>
+                        <p class="price">&yen;8,500 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item06.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">雨のパレード</p>
+                        <p class="itemName">ロゴTシャツ-2017-（ブラック）</p>
+                        <p class="price">&yen;3,055 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item07.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">雨のパレード</p>
+                        <p class="itemName">Tracks Long T-shirt “Petrichor”（White）</p>
+                        <p class="price">&yen;3,870 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item08.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">雨のパレード</p>
+                        <p class="itemName">Tracks Long T-shirt “Petrichor”（White）</p>
+                        <p class="price">&yen;3,870 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="moreBtn"><a href="#">More</a></div>
+    </div>
+</div>
+
 <!--{/strip}-->
 
