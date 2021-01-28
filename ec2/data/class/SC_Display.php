@@ -161,7 +161,10 @@ class SC_Display
             }
         }
 
-        return SC_Display_Ex::$device;
+        // @Scuti edit
+        // return SC_Display_Ex::$device;
+
+        return DEVICE_TYPE_PC;
     }
 
     public function assign($val1,$val2)
