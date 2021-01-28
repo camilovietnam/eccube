@@ -20,307 +20,774 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *}-->
 
+<script src="<!--{$TPL_URLPATH}-->/js/top-page.js"></script>
+<script src="<!--{$TPL_URLPATH}-->/js/slick.min.js"></script>
+
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/top_page.css">
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/slick.css">
+<link rel="stylesheet" href="<!--{$TPL_URLPATH}-->css/slick-theme.css">
+
 <!--{strip}-->
 
-<style>
-    .splide__slide img {
-        width: 100%;
-    }
-</style>
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+<div id="mainVisual">
+    <div class="mvLeft">
+        <div class="ttlnSnap">
+            <div class="title"><h1><img src="<!--{$TPL_URLPATH}-->img/common/main_logo.svg" alt="Merch View"></h1></div>
+            <div class="snap">
+                <a href="#" style="background-image: url(<!--{$TPL_URLPATH}-->img/common/mv_snap.jpg);">
+                    <p class="tag">Snap</p>
+                    <p class="itemName">Tracks Long T-shirt “1969”</p>
+                </a>
+            </div>
+        </div>
+        <div class="mvNews">
+            <h5>News</h5>
+            <p><a href="#">ウィンターセール開催のお知らせ</a></p>
+            <a href="#" class="arrow"></a>
+        </div>
+    </div>
+    <div class="mvRight">
+        <div class="about">
+            <a href="#">
+                <p>About</p>
+                <div><img src="<!--{$TPL_URLPATH}-->img/common/main_logo.svg" alt="Merch View"></div>
+            </a>
+        </div>
+        <div class="pickup">
+            <p class="tag">Pick up</p>
+            <div class="pickupSlide">
+                <ul>
+                    <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/mv_pickup01.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/feature01.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/feature02.jpg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
-<script>
-  document.addEventListener( 'DOMContentLoaded', function () {
-    new Splide( '.splide', {
-      type: 'loop',
-      autoplay: true,
-      interval: 3000,
-      pauseOnHover: true,
-      lazyLoad: true
-    } ).mount();
-  } );
-</script>
 
-<div class="splide">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-                <img src="upload/save_image/slide_1.jpg" alt="">
+<div id="reccomend" class="reccomend">
+    <div class="contentWrap">
+        <h2 class="anim">Recommend</h2>
+    </div>
+    <div class="reccomendWrap rtl" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg10.jpg);">
+        <div class="contentWrap">
+            <h3>Official髭男dism</h3>
+        </div>
+        <ul class="reccomendSlide rtl anim" dir="rtl">
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item10_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item10_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item10_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item10_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item10_05.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item10_06.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="reccomendWrap ltr" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg09.jpg);">
+        <div class="contentWrap">
+            <h3>あいみょん</h3>
+        </div>
+        <ul class="reccomendSlide ltr anim">
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item09_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item09_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item09_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item09_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item09_05.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item09_06.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="reccomendWrap rtl" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg01.jpg);">
+        <div class="contentWrap">
+            <h3>雨のパレード</h3>
+        </div>
+        <ul class="reccomendSlide rtl anim" dir="rtl">
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item01_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item01_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item01_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item01_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item01_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item01_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item01_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item01_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="reccomendWrap ltr" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg02.jpg);">
+        <div class="contentWrap">
+            <h3>Vaundy</h3>
+        </div>
+        <ul class="reccomendSlide ltr anim">
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item02_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item02_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item02_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item02_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item02_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item02_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item02_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item02_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="reccomendWrap rtl" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg03.jpg);">
+        <div class="contentWrap">
+            <h3>Karin.</h3>
+        </div>
+        <ul class="reccomendSlide rtl anim" dir="rtl">
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item03_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item03_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item03_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item03_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item03_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item03_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item03_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item03_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="reccomendWrap ltr" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg04.jpg);">
+        <div class="contentWrap">
+            <h3>SIRUP</h3>
+        </div>
+        <ul class="reccomendSlide ltr anim">
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item04_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item04_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item04_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item04_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item04_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item04_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item04_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item04_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="reccomendWrap rtl" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg05.jpg);">
+        <div class="contentWrap">
+            <h3>神山羊</h3>
+        </div>
+        <ul class="reccomendSlide rtl anim" dir="rtl">
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item05_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item05_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item05_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item05_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item05_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item05_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item05_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item05_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="reccomendWrap ltr" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg06.jpg);">
+        <div class="contentWrap">
+            <h3>羊文学</h3>
+        </div>
+        <ul class="reccomendSlide ltr anim">
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item06_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item06_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item06_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item06_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item06_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item06_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item06_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item06_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="reccomendWrap rtl" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg07.jpg);">
+        <div class="contentWrap">
+            <h3>Attractions</h3>
+        </div>
+        <ul class="reccomendSlide rtl anim" dir="rtl">
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item07_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item07_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item07_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item07_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item07_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item07_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item07_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item07_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="reccomendWrap ltr" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg08.jpg);">
+        <div class="contentWrap">
+            <h3>藤井 風</h3>
+        </div>
+        <ul class="reccomendSlide ltr anim">
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item08_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item08_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item08_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item08_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item08_01.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item08_02.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item08_03.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+            <li><a href="#">
+                    <img src="<!--{$TPL_URLPATH}-->img/top-page/item08_04.jpg" alt="">
+                    <div class="hover">
+                        <h5>アイテム名アイテム名</h5>
+                        <p>&yen;5,000 <span>税込</span></p>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="moreBtn"><a href="#">More</a></div>
+</div>
+
+<div id="newItems">
+    <div class="contentWrap">
+        <h2 class="anim">New Items</h2>
+        <ul class="itemList">
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item01.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">向井太一</p>
+                        <p class="itemName">「SAVAGE」Hoodie</p>
+                        <p class="price">&yen;5,500 <span>税込</span></p>
+                    </div>
+                </a>
             </li>
-            <li class="splide__slide">
-                <img src="upload/save_image/slide_2.jpg" alt="">
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item02.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">向井太一</p>
+                        <p class="itemName">Supplement Pouch</p>
+                        <p class="price">&yen;2,500 <span>税込</span></p>
+                    </div>
+                </a>
             </li>
-            <li class="splide__slide">
-                <img src="upload/save_image/slide_3.jpg" alt="">
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item03.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">雨のパレード</p>
+                        <p class="itemName">Tracks Long T-shirt “Petrichor”（White）</p>
+                        <p class="price">&yen;3,870 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item04.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">向井太一</p>
+                        <p class="itemName">Supplement T-Shirt（Sweet pea）</p>
+                        <p class="price">&yen;7,500 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item05.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">向井太一</p>
+                        <p class="itemName">-Eau de toilette- Supplement</p>
+                        <p class="price">&yen;8,500 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item06.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">雨のパレード</p>
+                        <p class="itemName">ロゴTシャツ-2017-（ブラック）</p>
+                        <p class="price">&yen;3,055 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item07.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">雨のパレード</p>
+                        <p class="itemName">Tracks Long T-shirt “Petrichor”（White）</p>
+                        <p class="price">&yen;3,870 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="itemThumb"><img src="<!--{$TPL_URLPATH}-->img/top-page/new_item08.jpg" alt="" class="anim"></div>
+                    <div class="itemTxt">
+                        <p class="artistName">雨のパレード</p>
+                        <p class="itemName">Tracks Long T-shirt “Petrichor”（White）</p>
+                        <p class="price">&yen;3,870 <span>税込</span></p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="moreBtn"><a href="#">More</a></div>
+    </div>
+</div>
+
+<div id="checked">
+    <div class="contentWrap">
+        <h2 class="anim">Checked Artists</h2>
+        <ul class="checkedList">
+            <li>
+                <div class="thumb anim"><a href="#"><img src="<!--{$TPL_URLPATH}-->img/top-page/checked01.jpg" alt=""></a></div>
+                <p>星野源</p>
+            </li>
+            <li>
+                <div class="thumb anim"><a href="#"><img src="<!--{$TPL_URLPATH}-->img/top-page/checked02.jpg" alt=""></a></div>
+                <p>サンボマスター</p>
+            </li>
+            <li>
+                <div class="thumb anim"><a href="#"><img src="<!--{$TPL_URLPATH}-->img/top-page/checked03.jpg" alt=""></a></div>
+                <p>never young beach</p>
+            </li>
+            <li>
+                <div class="thumb anim"><a href="#"><img src="<!--{$TPL_URLPATH}-->img/top-page/checked04.jpg" alt=""></a></div>
+                <p>suchmos</p>
             </li>
         </ul>
     </div>
 </div>
 
-<style>
-    .new-products .row {
-        color: black;
-        margin: auto;
-        margin-top: 50px;
-        padding: 10px;
-    }
-    .new-products .col {
-        width: 100%;
-        height: 100%;
-    }
-    .new-products .item-1 {
-        padding-top: 30px;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    .new-products .item-1 hr {
-        color: black;
-        background: black;
-        width: 20px;
-        border: 1px solid black;
-    }
-    .new-products .item-1 button {
-        margin-top: 10px;
-        background: black;
-        color: white;
-    }
-    .new-products .col h2 {
-        font-weight: bold;
-    }
-    .new-products .product-name {
-        font-weight: bold;
-    }
-    .new-products img {
-        width: 100%;
-    }
-</style>
-
-<div class="container">
-    <div class="new-products">
-        <div class="row">
-            <div class="col item-1">
-                <div>
-                    <h2>New Items</h2>
-                </div>
-                <hr>
-                <div>
-                    新着商品
-                </div>
-                <div>
-                    <button>More</button>
-                </div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Delicious Food</div>
-                <div>￥1500</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Bread</div>
-                <div>￥600</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Cake</div>
-                <div>￥1100</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Wine</div>
-                <div>￥3500</div>
-                <div>熊木杏里</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-    .recent-products .row {
-        margin: auto;
-        color: black;
-        padding: 10px
-    }
-    .recent-products .col {
-        width: 100%;
-        height: 100%;
-    }
-    .recent-products .item-1 {
-        padding-top: 30px;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    .recent-products .item-1 hr {
-        color: black;
-        background: black;
-        width: 20px;
-        border: 1px solid black;
-    }
-    .recent-products .item-1 button {
-        margin-top: 10px;
-        background: black;
-        color: white;
-    }
-    .recent-products .col h2 {
-        font-weight: bold;
-    }
-    .recent-products .product-name {
-        font-weight: bold;
-    }
-    .recent-products img {
-        width: 100%;
-    }
-</style>
-
-<div class="container">
-    <div class="recent-products">
-        <div class="row">
-            <div class="col item-1">
-                <div>
-                    <h2>Recently seen</h2>
-                </div>
-                <hr>
-                <div>
-                    新着商品
-                </div>
-                <div>
-                    <button>More</button>
-                </div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Product X</div>
-                <div>￥650</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Product Y</div>
-                <div>￥850</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Product Z</div>
-                <div>￥999</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Product AA</div>
-                <div>￥123</div>
-                <div>熊木杏里</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-    .recommended-products .row {
-        color: black;
-        margin: auto;
-        padding: 10px
-    }
-    .recommended-products .col {
-        width: 100%;
-        height: 100%;
-    }
-    .recommended-products .item-1 {
-        padding-top: 30px;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    .recommended-products .item-1 hr {
-        color: black;
-        background: black;
-        width: 20px;
-        border: 1px solid black;
-    }
-    .recommended-products .item-1 button {
-        margin-top: 10px;
-        background: black;
-        color: white;
-    }
-    .recommended-products .col h2 {
-        font-weight: bold;
-    }
-    .recommended-products .product-name {
-        font-weight: bold;
-    }
-    .recommended-products img {
-        width: 100%;
-    }
-</style>
-
-<div class="container">
-    <div class="recommended-products">
-        <div class="row">
-            <div class="col item-1">
-                <div>
-                    <h2>Recommended</h2>
-                </div>
-                <hr>
-                <div>
-                    新着商品
-                </div>
-                <div>
-                    <button>More</button>
-                </div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Lunch</div>
-                <div>￥666</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Dinner</div>
-                <div>￥555</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Breakfast</div>
-                <div>￥300</div>
-                <div>熊木杏里</div>
-            </div>
-            <div class="col">
-                <div>
-                    <img src="upload/save_image/recipe130.jpg" alt="">
-                </div>
-                <div class="product-name">Appetizers</div>
-                <div>￥1025</div>
-                <div>熊木杏里</div>
-            </div>
-        </div>
-    </div>
-</div>
 <!--{/strip}-->
 
