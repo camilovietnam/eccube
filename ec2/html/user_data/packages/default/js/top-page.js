@@ -1,4 +1,3 @@
-
 $(function(){
 
     /* smooth scroll */
@@ -9,6 +8,20 @@ $(function(){
         const position = target.offset().top;
         $('body,html').animate({scrollTop:position}, speed, 'swing');
         return false;
+    });
+
+    $(".searchIcon a").on("click", function(){
+        $("#search, .searchClose").fadeIn(400);
+        return false;
+    });
+    $(".searchClose a").on("click", function(){
+        $("#search, .searchClose").fadeOut(300);
+        return false;
+    });
+
+    $("#menuButton, #spMenu a").click( function(){
+        $("#spMenu").fadeToggle(300);
+        $("#menuButton").toggleClass("active");
     });
 
     $('.reccomendSlide.ltr').slick({
@@ -55,7 +68,6 @@ $(function(){
         autoplaySpeed: 4000
     });
 
-
     $(".sortTab .kana").on("click", function(){
         $(this).addClass("current");
         $(".sortTab .alphabet").removeClass("current");
@@ -89,7 +101,6 @@ $(function(){
     $(window).scroll();
 
     $("#op").delay(3500).fadeOut(1000);
-
 
     $(document).ready(function () {
         const scrollSpeed = 0.1;

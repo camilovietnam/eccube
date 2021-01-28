@@ -291,6 +291,105 @@
     }
 }
 
+/* ////////////////////////////////////////////////////////////////////////////////
+
+	Reccomend
+
+//////////////////////////////////////////////////////////////////////////////// */
+
+.reccomend .reccomendWrap {
+    padding: 60px 0 120px;
+    background-position: center center;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+.reccomend .reccomendWrap h3 {
+    color: #fff;
+    text-align: right;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    margin-bottom: 40px;
+}
+.reccomend .reccomendWrap .reccomendSlide li {
+    line-height: 0;
+}
+.reccomend .reccomendWrap .reccomendSlide li a {
+    display: block;
+    margin: 0 10%;
+    position: relative;
+}
+.reccomend .reccomendWrap .reccomendSlide li a:focus {
+    outline: none;
+}
+.reccomend .reccomendWrap .reccomendSlide li a:hover {
+    opacity: 1;
+}
+.reccomend .reccomendWrap .reccomendSlide li img {
+    width: 100%;
+}
+
+.reccomend .reccomendWrap .reccomendSlide li .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8;
+    color: #fff;
+    text-decoration: none;
+    padding: 25px;
+    opacity: 0;
+
+}
+.reccomend .reccomendWrap .reccomendSlide li .hover h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.reccomend .reccomendWrap .reccomendSlide li .hover p {
+    font-size: 14px;
+}
+.reccomend .reccomendWrap .reccomendSlide.rtl li .hover p {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+}
+.reccomend .reccomendWrap .reccomendSlide li .hover p span {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 813px) {
+
+    .reccomend .reccomendWrap .reccomendSlide li .hover {
+        transition: all 0.3s ease-out;
+    }
+    .reccomend .reccomendWrap .reccomendSlide li a:hover .hover {
+        opacity: 1;
+    }
+
+}
+@media screen and (max-width: 812px) {
+
+    .reccomend .reccomendWrap {
+        padding: 10vw 0 20vw;
+    }
+    .reccomend .reccomendWrap h3 {
+        font-size: 3.6vw;
+        font-weight: normal;
+        margin-bottom: 6vw;
+    }
+    .reccomend .reccomendWrap .reccomendSlide li a {
+        margin: 0 6%;
+    }
+
+}
 
 /* ////////////////////////////////////////////////////////////////////////////////
 
@@ -308,4 +407,12 @@
 
 #main_column.colnum1 {
     padding: 0;
+}
+
+#reccomend h2 {
+    color: black;
+}
+
+#reccomend h3 {
+    font-weight: bold;
 }
