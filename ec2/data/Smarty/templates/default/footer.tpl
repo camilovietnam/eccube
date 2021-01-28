@@ -28,14 +28,14 @@
     <div class="contentWrap">
         <div class="ftrNav">
             <ul>
-                <li><a href="#">merchviewとは</a></li>
-                <li><a href="#">よくある質問・お問い合わせ</a></li>
-                <li><a href="#">特定商取引法に基づく表示</a></li>
-                <li><a href="#">プライバシーポリシー</a></li>
+                <li><a href="/abouts">merchviewとは</a></li>
+                <li><a href="/faq">よくある質問・お問い合わせ</a></li>
+                <li><a href="/legal">特定商取引法に基づく表示</a></li>
+                <li><a href="/guide/privacy.php">プライバシーポリシー</a></li>
             </ul>
             <ul>
                 <li class="contact">お問い合わせ</li>
-                <li><a href="#">ユーザ用</a>　/　<a href="#">アーティスト用</a></li>
+                <li><a href="/contact">ユーザ用</a>　/　<a href="/contact">アーティスト用</a></li>
             </ul>
         </div>
 
