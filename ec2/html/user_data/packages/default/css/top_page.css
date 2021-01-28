@@ -567,7 +567,7 @@
     color: black;
 }
 
-.checkedList {
+#checked {
     letter-spacing: 0;
     color: black;
 }
