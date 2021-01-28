@@ -34,7 +34,7 @@
     <div class="row">
         <div class="col">
             <h1>This is the FAQ page</h1>
-            <p>Replace the content of this file (Smarty/templates/default/faq/index.tpl) with your code.</p>
+            <p>Replace the content of this file (/data/Smarty/templates/default/faq/index.tpl) with your code.</p>
         </div>
     </div>
 </div>
