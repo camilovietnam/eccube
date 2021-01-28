@@ -29,8 +29,8 @@
         <div class="ftrNav">
             <ul>
                 <li><a href="/abouts">merchviewとは</a></li>
-                <li><a href="#">よくある質問・お問い合わせ</a></li>
-                <li><a href="#">特定商取引法に基づく表示</a></li>
+                <li><a href="/faq">よくある質問・お問い合わせ</a></li>
+                <li><a href="/legal">特定商取引法に基づく表示</a></li>
                 <li><a href="/guide/privacy.php">プライバシーポリシー</a></li>
             </ul>
             <ul>
