@@ -40,7 +40,6 @@
                 </a>
             </div>
         </div>
-
         <div class="mvNews">
             <h5>News</h5>
             <p><a href="#">ウィンターセール開催のお知らせ</a></p>
@@ -72,7 +71,6 @@
     <div class="contentWrap">
         <h2 class="anim">Recommend</h2>
     </div>
-
     <div class="reccomendWrap rtl" style="background-image: url(<!--{$TPL_URLPATH}-->img/top-page/reccomend_bg10.jpg);">
         <div class="contentWrap">
             <h3>Official髭男dism</h3>
@@ -763,8 +761,31 @@
                 </a>
             </li>
         </ul>
-
         <div class="moreBtn"><a href="#">More</a></div>
+    </div>
+</div>
+
+<div id="checked">
+    <div class="contentWrap">
+        <h2 class="anim">Checked Artists</h2>
+        <ul class="checkedList">
+            <li>
+                <div class="thumb anim"><a href="#"><img src="<!--{$TPL_URLPATH}-->img/top-page/checked01.jpg" alt=""></a></div>
+                <p>星野源</p>
+            </li>
+            <li>
+                <div class="thumb anim"><a href="#"><img src="<!--{$TPL_URLPATH}-->img/top-page/checked02.jpg" alt=""></a></div>
+                <p>サンボマスター</p>
+            </li>
+            <li>
+                <div class="thumb anim"><a href="#"><img src="<!--{$TPL_URLPATH}-->img/top-page/checked03.jpg" alt=""></a></div>
+                <p>never young beach</p>
+            </li>
+            <li>
+                <div class="thumb anim"><a href="#"><img src="<!--{$TPL_URLPATH}-->img/top-page/checked04.jpg" alt=""></a></div>
+                <p>suchmos</p>
+            </li>
+        </ul>
     </div>
 </div>
 

@@ -477,6 +477,68 @@
 
 /* ////////////////////////////////////////////////////////////////////////////////
 
+	Checked Artist
+
+//////////////////////////////////////////////////////////////////////////////// */
+.checkedList {
+    display: flex;
+    flex-wrap: wrap;
+}
+.checkedList li {
+    width: calc(100% / 6 - 4%);
+    margin-right: 4%;
+}
+.checkedList li .thumb.anim {
+    transform: scale(0.8);
+}
+.checkedList li .thumb.anim.on {
+    transform: scale(1);
+}
+.checkedList li .thumb a {
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    line-height: 0;
+    margin-bottom: 20px;
+    border: #000 solid 2px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.checkedList li .thumb a img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 105%;
+    width: auto;
+    max-width: inherit;
+}
+.checkedList li p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 812px) {
+    .checkedList li {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 8vw;
+        padding: 0 5vw;
+    }
+    .checkedList li .thumb a {
+        margin-bottom: 3vw;
+    }
+    .checkedList li p {
+        font-size: 3vw;
+    }
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////
+
 	Custom code
 
 //////////////////////////////////////////////////////////////////////////////// */
@@ -502,5 +564,10 @@
 }
 
 #newItems h2{
+    color: black;
+}
+
+.checkedList {
+    letter-spacing: 0;
     color: black;
 }
