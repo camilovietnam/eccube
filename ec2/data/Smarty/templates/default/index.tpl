@@ -84,7 +84,6 @@
     </div>
 </div>
 
-
 <div id="reccomend" class="reccomend">
     <div class="contentWrap">
         <h2 class="anim">Recommend</h2>
