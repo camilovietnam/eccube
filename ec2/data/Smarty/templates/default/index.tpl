@@ -66,7 +66,7 @@
     </div>
     <div class="mvRight">
         <div class="about">
-            <a href="#">
+            <a href="/abouts">
                 <p>About</p>
                 <div><img src="<!--{$TPL_URLPATH}-->img/common/main_logo.svg" alt="Merch View"></div>
             </a>
