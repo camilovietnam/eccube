@@ -1,0 +1,17 @@
+#!/bin/bash
+FILES=$(git diff --cached --name-only --diff-filter=ACMR HEAD)
+
+if [ -z "$FILES" ]
+then
+    echo "No files to check";
+else
+    ec2/data/vendor/bin/phpcs -p --standard=./ec2/phpcs $FILES
+fi
+
+RESULT=$?
+
+if [ $RESULT -ne 0 ]; then
+    echo -e '\n[!] Please fix Code Sniffer errors and try to commit again'
+fi
+
+exit $RESULT

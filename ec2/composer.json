@@ -1,6 +1,6 @@
 {
     "name": "ec-cube/ec-cube2",
-    "description": "EC-CUBE 2.x",
+    "description": "Merchview Project",
     "type": "project",
     "homepage": "http://www.ec-cube.net/",
     "license": [
@@ -61,6 +61,9 @@
     "scripts": {
         "phpcs": "data/vendor/bin/phpcs -p --standard=./phpcs",
         "phpunit": "data/vendor/bin/phpunit tests",
-        "migrate": "data/vendor/bin/doctrine-migrations"
+        "migrate": "data/vendor/bin/doctrine-migrations",
+        "post-install-cmd": [
+            "cp ../pre-commit/pre-commit ../.git/hooks/pre-commit"
+        ]
     }
 }
