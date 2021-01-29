@@ -29,6 +29,24 @@
 
 <!--{strip}-->
 
+<div id="op">
+    <div class="opLogo"><img src="<!--{$TPL_URLPATH}-->img/common/main_logo.svg" alt="Merch View"></div>
+    <div class="opHdr mask01 mask maskH"></div>
+    <div class="opBody">
+        <div class="opLeft">
+            <div class="opwrap">
+                <div class="mask02 mask maskV"></div>
+                <div class="mask03 mask maskV"></div>
+            </div>
+            <div class="mask04 mask maskH"></div>
+        </div>
+        <div class="opRight">
+            <div class="mask05 mask maskH"></div>
+            <div class="mask06 mask maskH"></div>
+        </div>
+    </div>
+</div>
+
 <div id="mainVisual">
     <div class="mvLeft">
         <div class="ttlnSnap">
