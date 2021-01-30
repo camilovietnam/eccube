@@ -96,6 +96,14 @@
 
     <div id="search">
         <div class="searchInr">
+            <div class="searchBoxLeft">
+                <ul class="searchBoxLeftMenu">
+                    <li><a href="#">Topics</a></li>
+                    <li><a href="#">Reccomend</a></li>
+                    <li><a href="#">New Items</a></li>
+                    <li><a href="#">Checked </a></li>
+                </ul>
+            </div>
             <div class="searchBox">
                 <div class="searchForm">
                     <input type="text" placeholder="キーワードからさがす">
@@ -124,13 +132,12 @@
                     <p class="searchTtl">Featured</p>
                     <ul>
                         <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/feature01.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/feature02.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="<!--{$TPL_URLPATH}-->img/common/mv_pickup01.jpg" alt=""></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 
 <!--{*I will remove this later, I'm keeping it only to remember how to check login:*}-->

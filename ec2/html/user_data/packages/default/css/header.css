@@ -21,7 +21,6 @@ i.snsIcon {
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-
 	color: #000;
 }
 .icon_facebook:before { content: "\e900"; }
@@ -30,15 +29,12 @@ i.snsIcon {
 .icon_twitter:before { content: "\e903";}
 .icon_youtube:before { content: "\e904";}
 
-
 body {
 	font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 	font-size: 12px;
 	line-height: 1.8;
 	-webkit-text-size-adjust: 100%;
 }
-
-
 input[type="button"],
 input[type="text"],
 select,
@@ -51,20 +47,17 @@ textarea {
 	-webkit-border-radius: 0;
 	border: none;
 }
-
 img {
 	max-width: 100%;
 	height: auto;
 }
 ul { list-style: none;}
-
 .contentWrap {
 	padding: 0 60px;
 	max-width: 1260px;
 	margin: 0 auto;
     overflow: hidden;
 }
-
 .moreBtn {
 	padding: 80px;
 }
@@ -82,7 +75,6 @@ ul { list-style: none;}
 	box-sizing: border-box;
 	letter-spacing: 0.05em;
 }
-
 .anim {
 	opacity: 0;
 	transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
@@ -90,15 +82,10 @@ ul { list-style: none;}
 .anim.on {
 	opacity: 1;
 }
-
-
 @media screen and (min-width: 813px) {
-
 	.sp { display: none;}
-
 	a {transition: all 0.3s ease-out;}
 	a:hover { opacity: 0.5;}
-
 	.moreBtn a:hover {
 		opacity: 1;
 		background-color: #000;
@@ -106,13 +93,10 @@ ul { list-style: none;}
 	}
 }
 @media screen and (max-width: 812px) {
-
 	.pc { display: none;}
-
 	.contentWrap {
 		padding: 0 5vw;
 	}
-
 	.moreBtn {
 		padding: 12vw;
 	}
@@ -122,8 +106,6 @@ ul { list-style: none;}
 		max-width: 100%;
 	}
 }
-
-
 
 /* ////////////////////////////////////////////////////////////////////////////////
 
@@ -146,7 +128,6 @@ ul { list-style: none;}
 	line-height: 0;
 	width: 25px;
 }
-
 .header h1 {
 	line-height: 0;
 	max-width: 140px;
@@ -155,7 +136,6 @@ ul { list-style: none;}
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-
 .header .hdrMenu {
 	display: flex;
     align-items: center;
@@ -185,7 +165,6 @@ ul { list-style: none;}
 	border-radius: 50%;
 	font-size: 10px;
 }
-
 .header .login {
 	margin-left: 25px;
 }
@@ -202,19 +181,15 @@ ul { list-style: none;}
 	height: 40px;
 	line-height: 36px;
 }
-
 .logind .header .login a {
 	background-color: #F49582;
 }
-
 @media screen and (min-width: 813px) {
-
 	.header .login a:hover {
 		opacity: 1;
 		background-color: #000;
 		color: #fff;
 	}
-
 	#menuButton,
 	#spMenu {
 		display: none !important;
@@ -229,11 +204,9 @@ ul { list-style: none;}
 	.header h1 {
 		max-width: 26vw;
 	}
-
 	.header .searchIcon {
 		width: 6vw;
 	}
-
 	.header .login {
 		margin-left: 7vw;
 		display: none;
@@ -245,7 +218,6 @@ ul { list-style: none;}
 		height: auto;
 		line-height: 7.2vw;
 	}
-
 	.header .hdrMenu .cart {
 		width: 4vw;
 		margin-left: 4vw;
@@ -262,7 +234,6 @@ ul { list-style: none;}
 		width: 5vw;
 		margin-left: 4vw;
 	}
-
 	#menuButton {
 		display: block;
 		width: 40px;
@@ -287,7 +258,6 @@ ul { list-style: none;}
 	#menuButton.active span {
 		background-color: #fff;
 	}
-
 	#menuButton span:first-child { top: 12px;}
 	#menuButton span:nth-child(2) { margin-top: -1px; top: 50%;}
 	#menuButton span:nth-child(3) { bottom: 12px;}
@@ -298,7 +268,6 @@ ul { list-style: none;}
 	#menuButton.active span:nth-child(3) {
 		transform: translateY(-7px) rotate(-45deg);
 	}
-
 	#spMenu {
 		padding-top: 14.5vw;
 		display: none;
@@ -313,7 +282,6 @@ ul { list-style: none;}
 	#spMenu .spMenuInr {
 		padding: 8vw 6vw;
 	}
-
 	#spMenu .spMenuBtn {
 		margin-bottom: 8vw;
 	}
@@ -341,7 +309,6 @@ ul { list-style: none;}
 		background: url(../img/common/icon_fav.svg) no-repeat left 15%;
 		background-size: auto 80%;
 	}
-
 	#spMenu .ftrNav {
     	padding: 6vw 0 4vw;
 		border-top: #000 solid 1px;
@@ -377,12 +344,10 @@ ul { list-style: none;}
 	#spMenu .ftrNav ul:last-child li a {
     	display: inline-block;
 	}
-
 	#spMenu .ftrNav li.contact {
 		width: 100%;
 		color: #000;
 	}
-
 	#spMenu .ftrBtm {
 		display: flex;
 		justify-content: space-between;
@@ -398,9 +363,7 @@ ul { list-style: none;}
 	#spMenu .ftrBtm .copyright {
 		font-size: 2.6vw;
 	}
-
 }
-
 
 /* ////////////////////////////////////////////////////////////////////////////////
 
@@ -408,21 +371,20 @@ ul { list-style: none;}
 
 //////////////////////////////////////////////////////////////////////////////// */
 .searchClose {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    width: 36px;
-    height: 36px;
-    background-color: #000;
-    transform: translateY(-50%);
-    line-height: 0;
-    display: none;
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	width: 36px;
+	height: 36px;
+	background-color: #000;
+	transform: translateY(-50%);
+	line-height: 0;
+	display: none;
 }
 .searchClose a {
 	display: block;
-    padding: 8px;
+	padding: 8px;
 }
-
 #search {
 	display: none;
 	position: fixed;
@@ -431,33 +393,46 @@ ul { list-style: none;}
 	width: 100%;
 	height: 100%;
 	z-index: 9990;
-    background-image: linear-gradient(230deg, #C26E81 0%, #0630FF 80%);
-	text-align: left;
-	letter-spacing: 0;
-	color: black;
 }
 #search .searchInr {
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-}
-#search .searchBox {
-    margin-top: 62px;
+	padding-top: 62px;
 	background-color: #fff;
-    padding: 5vh;
-	width: 90%;
-	max-width: 880px;
+}
+#search .searchBoxLeft {
+	padding: 6vh 4vw;
+	width: 25%;
 	box-sizing: border-box;
 }
-
+#search .searchBoxLeft .searchBoxLeftMenu li {
+	margin-bottom: 2vh;
+}
+#search .searchBoxLeft .searchBoxLeftMenu li a {
+	color: #000;
+	text-decoration: none;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-size: 24px;
+	letter-spacing: 0.1em;
+}
+#search .searchBox {
+	background-color: #fff;
+	padding: 5vh 10vw;
+	width: 75%;
+	box-sizing: border-box;
+	border-left: #000 solid 2px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 #search .searchForm {
 	display: flex;
 	justify-content: space-between;
 	border: #000 solid 2px;
 	padding: 1vh 2vh;
-    margin-bottom: 2.5vh;
+	margin-bottom: 2.5vh;
 }
 #search .searchForm input[type="text"] {
 	width: calc(100% - 100px);
@@ -471,23 +446,21 @@ ul { list-style: none;}
 	width: 90px;
 	text-align: center;
 	border-left: #000 solid 1px;
-    font-family: neue-haas-grotesk-display, sans-serif;
+	font-family: neue-haas-grotesk-display, sans-serif;
 	font-size: 14px;
 	letter-spacing: 0.06em;
 	padding-left: 2vh;
 }
-
 #search .searchTtl {
 	color: #aaa;
-    font-family: neue-haas-grotesk-display, sans-serif;
+	font-family: neue-haas-grotesk-display, sans-serif;
 	font-weight: bold;
-    font-size: 1.6vh;
+	font-size: 1.6vh;
 	letter-spacing: 0.06em;
-    margin-bottom: 1.2vh;
+	margin-bottom: 1.2vh;
 }
-
 #search .searchKeyword {
-    margin-bottom: 1.5vh;
+	margin-bottom: 2vh;
 }
 #search .searchKeyword ul {
 	display: flex;
@@ -498,69 +471,86 @@ ul { list-style: none;}
 }
 #search .searchKeyword ul li a {
 	display: block;
-    text-align: center;
-    color: #000;
-    text-decoration: none;
-    white-space: nowrap;
-    padding: 0.6vh 2.5vh;
-    border: #000 solid 2px;
-    border-radius: 30px;
-    font-size: 1.5vh;
+	text-align: center;
+	color: #000;
+	text-decoration: none;
+	white-space: nowrap;
+	padding: 0.6vh 2.5vh;
+	border: #000 solid 2px;
+	border-radius: 30px;
+	font-size: 1.5vh;
 }
-
 #search .searchMenu {
 	border-top: #000 solid 1px;
-    margin-bottom: 3vh;
+	margin-bottom: 3vh;
 }
 #search .searchMenu li {
 	border-bottom: #000 solid 1px;
 }
 #search .searchMenu li a {
-    display: block;
-    color: #000;
-    text-decoration: none;
-    font-size: 1.7vh;
-    font-weight: bold;
-    padding: 1.5vh 0;
-    background: url(../img/common/arrow02.svg) no-repeat right center;
-    background-size: 20px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+	font-size: 1.7vh;
+	font-weight: bold;
+	padding: 2vh 0;
+	background: url(../img/common/arrow02.svg) no-repeat right center;
+	background-size: 20px;
 }
 #search .searchMenu li a span {
 	color: #aaa;
-    font-family: neue-haas-grotesk-display, sans-serif;
-    font-size: 1.4vh;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-size: 1.4vh;
 	letter-spacing: 0.06em;
-    margin-left: 2vh;
+	margin-left: 2vh;
 }
-
 #search .feature ul {
 	display: flex;
 }
 #search .feature ul li {
-    width: 23%;
-    margin: 0 1%;
-    line-height: 0;
+	width: 23%;
+	margin: 0 1%;
+	line-height: 0;
 }
 #search .feature ul li img {
 	width: 100%;
 	height: auto;
 }
-
-
 @media screen and (max-width: 812px) {
-
 	.searchClose {
 		width: 40px;
 		height: 40px;
 		left: 3vw;
 	}
 	.searchClose a {
-    	padding: 12px;
+		padding: 12px;
 	}
-
+	#search .searchBoxLeft {
+		padding: 0 6vw 2vw;
+		width: 100%;
+	}
+	#search .searchBoxLeft .searchBoxLeftMenu {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#search .searchBoxLeft .searchBoxLeftMenu li {
+		width: 50%;
+		margin-bottom: 2vw;
+	}
+	#search .searchBoxLeft .searchBoxLeftMenu li a {
+		font-size: 4.6vw;
+		line-height: 1.4;
+	}
 	#search .searchBox {
-		margin-top: 14.5vw;
 		padding: 3vh;
+		width: 100%;
+		border-left: none;
+		border-top: #000 solid 2px;
+	}
+	#search .searchInr {
+		padding-top: 18vw;
+		justify-content: flex-start;
+		flex-direction: column;
 	}
 	#search .searchForm {
 		padding: 0.6vh 1.5vh;
@@ -575,14 +565,12 @@ ul { list-style: none;}
 		width: calc(100% - 18vw);
 		font-size: 3.2vw;
 	}
-
 	#search .searchTtl {
 		font-size: 1.6vh;
 		margin-bottom: 1.2vh;
 	}
-
-	#search .feature ul {
-		justify-content: space-between;
+	#search .searchMenu li a {
+		padding: 1.5vh 0;
 	}
 	#search .searchKeyword ul li {
 		margin: 0 1vw 2vw;
@@ -592,11 +580,18 @@ ul { list-style: none;}
 		border: #000 solid 1px;
 		font-size: 1.2vh;
 	}
-
 	#search .feature ul li {
-		width: 46%;
-		margin: 0;
+		width: 30%;
+		margin: 0 1%;
 	}
+}
 
+/* ////////////////////////////////////////////////////////////////////////////////
 
+	Common
+
+//////////////////////////////////////////////////////////////////////////////// */
+#search {
+	text-align: left;
+	letter-spacing: 0;
 }
