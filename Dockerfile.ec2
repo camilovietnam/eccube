@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
          nano unzip zip libzip-dev libicu-dev libpng-dev netcat \
          libjpeg-dev libwebp-dev zlib1g-dev libxpm-dev lynx iputils-ping
 RUN docker-php-ext-install zip mysqli pdo pdo_mysql intl gd
+RUN docker-php-ext-configure gd --with-jpeg-dir
+RUN docker-php-ext-install -j$(nproc) gd
 
 # Install and setupd xdebug
 RUN pecl install xdebug && docker-php-ext-enable xdebug \
@@ -20,12 +22,12 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug \
         && echo "xdebug.client_host=192.168.32.1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
         && echo "xdebug.client_port=9003" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
         && echo "xdebug.discover_client_host=true" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-        && echo "xdebug.idekey=PHPSTORM" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini 
+        && echo "xdebug.idekey=PHPSTORM" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 # Apache setup
 RUN a2enmod rewrite
 RUN sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\/html/g' \
-        /etc/apache2/sites-available/000-default.conf 
+        /etc/apache2/sites-available/000-default.conf
 
 # Open permissions
 RUN chown www-data:www-data -R /var/www/html && chmod -R 777 /var/www/html
