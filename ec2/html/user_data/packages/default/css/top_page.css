@@ -1,3 +1,149 @@
+/* ////////////////////////////////////////////////////////////////////////////////
+
+	Opening
+
+//////////////////////////////////////////////////////////////////////////////// */
+#op {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(50vw + 62px);
+    z-index: 9999;
+}
+#op .opLogo {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    z-index: 1;
+}
+#op .opLogo img {
+    width: 100%;
+    opacity: 0;
+    animation: opLogo 1s ease-out 0.5s forwards,
+    opLogo02 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035) 2.2s forwards;
+
+}
+@keyframes opLogo {
+    0% { opacity: 0; filter: blur(60px); transform: scale(1.3);}
+    100% { opacity: 1; filter: blur(0); transform: scale(1);}
+}
+@keyframes opLogo02 {
+    0% { opacity: 1; transform: scale(1);}
+    100% { opacity: 0; transform: scale(0.5);}
+}
+#op .opLogo img {
+    width: 100%;
+}
+#op .opHdr {
+    height: 62px;
+    width: 100%;
+}
+#op .opBody {
+    height: calc(100% - 62px);
+    display: flex;
+}
+#op .opLeft {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#op .opLeft .opwrap {
+    height: calc(100% - 55px);
+    display: flex;
+}
+#op .opRight {
+    width: 25%;
+    height: 100%;
+}
+.mask {
+    position: relative;
+}
+.mask.mask02 {
+    width: 50%;
+    height: 100%;
+}
+.mask.mask03 {
+    width: 50%;
+    height: 100%;
+}
+.mask.mask04 {
+    height: 55px;
+    width: 100%;
+}
+.mask.mask05 {
+    height: 50%;
+    width: 100%;
+}
+.mask.mask06 {
+    height: 50%;
+    width: 100%;
+}
+.mask::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+}
+.mask.mask01::before { left: 0; top: 0;}
+.mask.mask02::before { left: 0; top: 0;}
+.mask.mask03::before { left: 0; bottom: 0;}
+.mask.mask04::before { right: 0; top: 0;}
+.mask.mask05::before { right: 0; top: 0;}
+.mask.mask06::before { left: 0; top: 0;}
+
+@keyframes opMaskV {
+    0% { height: 100%;}
+    100% { height: 0;}
+}
+@keyframes opMaskH {
+    0% { width: 100%;}
+    100% { width: 0;}
+}
+@media screen and (min-width: 813px) {
+    .mask.maskV::before { animation: opMaskV 0.6s cubic-bezier(0.95, 0.05, 0.795, 0.035) 3.5s forwards;}
+    .mask.maskH::before { animation: opMaskH 0.6s cubic-bezier(0.95, 0.05, 0.795, 0.035) 3.5s forwards;}
+}
+@media screen and (max-width: 812px) {
+    #op {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+    #op .opLogo {
+        width: 60%;
+    }
+    #op .opLeft {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    #op .opLeft .opwrap,
+    #op .opBody,
+    #op .opLeft .opwrap {
+        height: auto;
+        display: block;
+    }
+    #op .opRight {
+        width: 100%;
+        height: auto;
+    }
+    .mask {
+        height: calc(100vh / 6) !important;
+        width: 100% !important;
+    }
+    .mask.maskV::before { animation: opMaskV 0.6s cubic-bezier(0.95, 0.05, 0.795, 0.035) 3s forwards;}
+    .mask.maskH::before { animation: opMaskV 0.6s cubic-bezier(0.95, 0.05, 0.795, 0.035) 3s forwards;}
+    .mask.mask03::before { left: 0; bottom: inherit; top: 0;}
+}
 
 /* ////////////////////////////////////////////////////////////////////////////////
 
@@ -10,7 +156,6 @@
     padding-top: 62px;
     letter-spacing: 0;
 }
-
 #mainVisual .mvLeft {
     background-image: linear-gradient(230deg, #F49582 0%, #C26E81 35%, #0630FF 70%);
     width: 75%;
@@ -101,7 +246,6 @@
     height: 20px;
     transform: translateY(-50%);
 }
-
 #mainVisual .mvRight {
     width: 25%;
     display: flex;
@@ -135,7 +279,6 @@
 #mainVisual .mvRight .about a div {
     width: 50%;
 }
-
 #mainVisual .mvRight .pickup {
     padding-top: 100%;
     position: relative;
@@ -185,7 +328,6 @@
 #mainVisual .mvRight .pickup .slick-slide img {
     width: 100%;
 }
-
 #reccomend,
 #checked {
     padding-top: 100px;
@@ -214,9 +356,7 @@
     transform: translateX(0);
 }
 
-
 @media screen and (max-width: 812px) {
-
     #mainVisual {
         display: block;
         padding-top: 13.8vw;
@@ -239,7 +379,6 @@
     #mainVisual .mvLeft .snap .itemName {
         font-size: 3vw;
     }
-
     #mainVisual .mvLeft .mvNews {
         padding: 3vw 5vw;
     }
@@ -260,8 +399,6 @@
         width: 6vw;
         height: 6vw;
     }
-
-
     #mainVisual .mvRight {
         width: 100%;
         border-left: none;
@@ -270,7 +407,6 @@
         font-size: 4.8vw;
         margin-bottom: 3vw;
     }
-
     #mainVisual .mvRight .pickup {
         border-bottom: #000 solid 2px;
     }
@@ -278,8 +414,6 @@
         padding: 1.5vw 3.5vw;
         font-size: 2.8vw;
     }
-
-
     #reccomend, #checked {
         padding-top: 18vw;
     }
@@ -327,7 +461,6 @@
 .reccomend .reccomendWrap .reccomendSlide li img {
     width: 100%;
 }
-
 .reccomend .reccomendWrap .reccomendSlide li .hover {
     position: absolute;
     top: 0;
@@ -345,7 +478,6 @@
     text-decoration: none;
     padding: 25px;
     opacity: 0;
-
 }
 .reccomend .reccomendWrap .reccomendSlide li .hover h5 {
     font-size: 16px;
@@ -366,17 +498,14 @@
 }
 
 @media screen and (min-width: 813px) {
-
     .reccomend .reccomendWrap .reccomendSlide li .hover {
         transition: all 0.3s ease-out;
     }
     .reccomend .reccomendWrap .reccomendSlide li a:hover .hover {
         opacity: 1;
     }
-
 }
 @media screen and (max-width: 812px) {
-
     .reccomend .reccomendWrap {
         padding: 10vw 0 20vw;
     }
@@ -388,7 +517,6 @@
     .reccomend .reccomendWrap .reccomendSlide li a {
         margin: 0 6%;
     }
-
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////
@@ -396,6 +524,7 @@
 	Item list
 
 //////////////////////////////////////////////////////////////////////////////// */
+
 .itemList {
     border-top: #000 solid 2px;
     border-left: #000 solid 2px;
@@ -414,7 +543,6 @@
     color: #000;
     text-decoration: none;
 }
-
 .itemList li .itemThumb {
     line-height: 0;
 }
@@ -447,9 +575,7 @@
     font-size: 12px;
 }
 
-
 @media screen and (max-width: 812px) {
-
     .itemList {
         border-top: #000 solid 1px;
         border-left: #000 solid 1px;
@@ -473,7 +599,6 @@
         font-size: 3.6vw;
     }
 }
-
 
 /* ////////////////////////////////////////////////////////////////////////////////
 
@@ -520,7 +645,6 @@
     font-weight: bold;
 }
 
-
 @media screen and (max-width: 812px) {
     .checkedList li {
         width: 50%;
@@ -536,7 +660,6 @@
     }
 }
 
-
 /* ////////////////////////////////////////////////////////////////////////////////
 
 	Custom code
@@ -546,27 +669,21 @@
 .body-container {
     width: 100%!important;
 }
-
 .body-container #main_column.colnum1 {
     width: 100%;
 }
-
 #main_column.colnum1 {
     padding: 0;
 }
-
 #reccomend h2 {
     color: black;
 }
-
 #reccomend h3 {
     font-weight: bold;
 }
-
 #newItems h2{
     color: black;
 }
-
 #checked {
     letter-spacing: 0;
     color: black;
