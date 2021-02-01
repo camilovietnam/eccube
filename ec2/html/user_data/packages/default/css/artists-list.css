@@ -1,0 +1,1257 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////
+
+	Common
+
+//////////////////////////////////////////////////////////////////////////////// */
+@font-face {
+    font-family: 'sns_icon';
+    src:
+            url('../font/sns_icon.ttf?5mfine') format('truetype'),
+            url('../font/sns_icon.woff?5mfine') format('woff'),
+            url('../font/sns_icon.svg?5mfine#icf') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+i.snsIcon {
+    font-family: 'sns_icon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+
+    color: #000;
+}
+.icon_facebook:before { content: "\e900"; }
+.icon_instagram:before { content: "\e901";}
+.icon_line:before { content: "\e902";}
+.icon_twitter:before { content: "\e903";}
+.icon_youtube:before { content: "\e904";}
+
+
+body {
+    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+    -webkit-text-size-adjust: 100%;
+}
+body.modal {
+    height: 100vh;
+    overflow-y: hidden;
+    padding-right: 15px;
+    position: fixed;
+}
+
+
+input[type="button"],
+input[type="text"],
+select,
+input[type="submit"],
+input[type="file"],
+input[type="checkbox"],
+textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul { list-style: none;}
+
+.contentWrap {
+    padding: 0 60px;
+    max-width: 1260px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.moreBtn {
+    padding: 80px;
+}
+.moreBtn a {
+    display: block;
+    border: #000 solid 2px;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 25px;
+    color: #000;
+    text-decoration: none;
+    max-width: 360px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    letter-spacing: 0.05em;
+}
+
+.anim {
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+.anim.on {
+    opacity: 1;
+}
+
+
+@media screen and (min-width: 813px) {
+
+    .sp { display: none;}
+
+    a {transition: all 0.3s ease-out;}
+    a:hover { opacity: 0.5;}
+
+    .moreBtn a:hover {
+        opacity: 1;
+        background-color: #000;
+        color: #fff;
+    }
+}
+@media screen and (max-width: 812px) {
+
+    .pc { display: none;}
+
+    .contentWrap {
+        padding: 0 5vw;
+    }
+
+    .moreBtn {
+        padding: 12vw;
+    }
+    .moreBtn a {
+        font-size: 3.8vw;
+        padding: 4vw;
+        max-width: 100%;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////
+
+	Lower page
+
+//////////////////////////////////////////////////////////////////////////////// */
+main {
+    padding-top: 62px;
+}
+
+main .topicPath {
+    padding: 30px 0 0;
+    color: #666;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+}
+main .topicPath a {
+    color: #666;
+    text-decoration: none;
+}
+main .topicPath span {
+    color: #000;
+    font-weight: bold;
+}
+
+main h2.type01 {
+    text-align: center;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    margin-bottom: 60px;
+    margin-top: 120px;
+}
+
+main h2.type01 span {
+    display: block;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+main #reccomend {
+    padding-top: 60px;
+}
+
+
+.artistsSearchWrap {
+    padding-bottom: 60px;
+    border-bottom: #000 solid 1px;
+    margin-bottom: 60px;
+}
+
+.sortTab {
+    display: flex;
+    margin-bottom: 60px;
+    border-left: #000 solid 2px;
+    border-top: #000 solid 2px;
+    border-bottom: #000 solid 2px;
+}
+.sortTab li {
+    width: 50%;
+    border-right: #000 solid 2px;
+}
+.sortTab li a {
+    display: block;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 20px;
+    background-color: #ccc;
+}
+.sortTab li a.current {
+    background-color: #fff;
+}
+
+.searchBtnKana {
+    display: flex;
+    justify-content: space-between;
+}
+.searchBtnKana ul {
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.searchBtnKana ul li {
+    width: 20%;
+    padding: 2px;
+}
+.searchBtnKana ul li a {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+#searchBtnAlphabet {
+    display: none;
+}
+.searchBtnAlphabet ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.searchBtnAlphabet ul li {
+    width: calc(100% / 13);
+    padding: 2px;
+}
+.searchBtnAlphabet ul li a {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.artistListWrap {
+    padding-top: 80px;
+}
+.artistListWrap h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.artistListWrap .artistList {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: #000 solid 2px;
+}
+.artistListWrap .artistList li {
+    width: calc(100% / 3);
+    border-right: #000 solid 2px;
+    border-bottom: #000 solid 2px;
+}
+.artistListWrap .artistList li:nth-child(-n + 3) {
+    border-top: #000 solid 2px;
+}
+.artistListWrap .artistList li a {
+    display: block;
+    padding: 20px 55px 20px 30px;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    background: url("../img/common/arrow02.svg") no-repeat 95% center;
+    background-size: 25px;
+}
+
+.artistListAlphabet {
+    display: none;
+}
+
+
+.myPageHead {
+    padding-bottom: 40px;
+    border-bottom: #000 solid 2px;
+    margin-bottom: 40px;
+}
+.myPageHead .sortTab li {
+    width: 20%;
+}
+.myPageHead .welcom {
+    font-size: 14px;
+}
+.myPageHead .welcom span {
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mypageBody .history {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+    border-bottom: #000 solid 1px;
+}
+.mypageBody .history .historyLeft {
+    width: 220px;
+}
+.mypageBody .history .historyLeft .date {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+}
+.mypageBody .history .historyLeft .time {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+.mypageBody .history .historyLeft dl {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.mypageBody .history .historyLeft dl dt {
+    width: 90px;
+}
+.mypageBody .history .historyLeft dl dd {
+    width: calc(100% - 90px);
+    font-weight: bold;
+}
+.mypageBody .history .historyLeft .detailBtn a {
+    display: block;
+    border: #000 solid 2px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    padding: 12px;
+}
+
+.mypageBody .history .historyList {
+    width: calc(100% - 320px);
+}
+
+.mypageBody .history .historyList li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #000 dotted 1px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.mypageBody .history .historyList li:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+.mypageBody .history .historyList .thumb {
+    line-height: 0;
+    width: 26%;
+}
+.mypageBody .history .historyList .thumb img {
+    width: 100%;
+    height: auto;
+}
+
+.mypageBody .history .historyList .itemInfo {
+    width: 68%;
+}
+.mypageBody .history .historyList .itemInfo dl {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+.mypageBody .history .historyList .itemInfo dl:last-child {
+    margin-bottom: 0;
+}
+.mypageBody .history .historyList .itemInfo dl dt {
+    width: 140px;
+}
+.mypageBody .history .historyList .itemInfo dl dd {
+    width: calc(100% - 160px);
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 813px) {
+    .artistListWrap .artistList li a:hover {
+        background: #000 url("../img/common/arrow.svg") no-repeat 95% center;
+        background-size: 25px;
+        color: #fff;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    main {
+        padding-top: 14.5vw;
+    }
+
+    main .topicPath {
+        padding: 6vw 0 0;
+        font-size: 2.6vw;
+    }
+    main h2.type01 {
+        font-size: 6vw;
+        margin-bottom: 10vw;
+        margin-top: 12vw;
+    }
+    main h2.type01 span {
+        font-size: 3.8vw;
+        margin-top: 0;
+    }
+
+    main #reccomend {
+        padding-top: 4vw;
+    }
+
+
+    .artistsSearchWrap {
+        padding-bottom: 8vw;
+        margin-bottom: 0;
+    }
+    .sortTab {
+        margin-bottom: 8vw;
+    }
+    .sortTab li a {
+        font-size: 3vw;
+        padding: 2vw;
+    }
+    .searchBtnKana {
+        display: block;
+    }
+    .searchBtnKana ul {
+        width: 100%;
+    }
+    .searchBtnKana ul li a {
+        padding: 1.5vw 3vw;
+        font-size: 3.8vw;
+    }
+    .searchBtnAlphabet ul li {
+        width: calc(100% / 6);
+    }
+    .searchBtnAlphabet ul li a {
+        padding: 1.5vw 3vw;
+        font-size: 3.8vw;
+    }
+
+    .artistListWrap {
+        padding-top: 16vw;
+    }
+    .artistListWrap h3 {
+        font-size: 4.2vw;
+        margin-bottom: 3vw;
+    }
+
+    .artistListWrap .artistList li {
+        width: 100%;
+    }
+    .artistListWrap .artistList li:nth-child(2),
+    .artistListWrap .artistList li:nth-child(3) {
+        border-top: none;
+    }
+
+    .artistListWrap .artistList li a {
+        padding: 3vw 14vw 3vw 6vw;
+        font-size: 3.4vw;
+        background-size: 6vw;
+    }
+
+    .myPageHead .sortTab {
+        flex-wrap: wrap;
+        border-bottom: none;
+    }
+    .myPageHead .sortTab li {
+        width: calc(100% / 3);
+        border-bottom: #000 solid 2px;
+    }
+    .myPageHead {
+        padding-bottom: 5vw;
+        margin-bottom: 8vw;
+    }
+    .myPageHead .welcom {
+        font-size: 3vw;
+    }
+    .myPageHead .welcom span {
+        margin: 0 2vw;
+        font-size: 3.8vw;
+    }
+
+
+    .mypageBody .history {
+        display: block;
+        padding: 8vw 0;
+    }
+    .mypageBody .history .historyLeft {
+        width: 100%;
+        margin-bottom: 10vw;
+    }
+    .mypageBody .history .historyLeft .date {
+        font-size: 4.2vw;
+    }
+    .mypageBody .history .historyLeft .time {
+        font-size: 3.6vw;
+    }
+    .mypageBody .history .historyLeft dl {
+        font-size: 3.2vw;
+        margin-top: 4vw;
+        margin-bottom: 6vw;
+    }
+    .mypageBody .history .historyLeft .detailBtn a {
+        font-size: 3.8vw;
+        padding: 2.5vw;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .mypageBody .history .historyList {
+        width: 100%;
+    }
+    .mypageBody .history .historyList li {
+        padding-bottom: 5vw;
+        margin-bottom: 6vw;
+    }
+    .mypageBody .history .historyList .thumb {
+        width: 24%;
+    }
+    .mypageBody .history .historyList .itemInfo {
+        width: 70%;
+    }
+    .mypageBody .history .historyList .itemInfo dl {
+        margin-bottom: 6vw;
+        font-size: 3vw;
+    }
+    .mypageBody .history .historyList .itemInfo dl dt {
+        width: 25vw;
+    }
+    .mypageBody .history .historyList .itemInfo dl dd {
+        width: calc(100% - 25vw);
+    }
+
+}
+
+
+
+
+.itemListWrap {
+    margin-top: 60px;
+    border-top: #000 solid 2px;
+    position: relative;
+}
+.itemListWrap .itemListSearch {
+    width: 240px;
+    padding: 30px;
+    position: absolute;
+}
+.itemListWrap .itemListSearch.fix {
+    position: fixed;
+    bottom: 30px;
+}
+.itemListWrap .itemListSearch.fix.bottom {
+    position: absolute;
+    bottom: 0;
+}
+.itemListWrap .itemListSearch .itemListSearchBox {
+    border-bottom: #000 solid 2px;
+    padding: 20px 0;
+}
+.itemListWrap .itemListSearch .itemListSearchBox h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck.scrlArea {
+    max-height: 250px;
+    overflow: auto;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck li {
+    margin-bottom: 10px;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck.accordion dt {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    padding: 5px 0;
+    cursor: pointer;
+    position: relative;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck.accordion dt::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-right: #ccc solid 2px;
+    border-bottom: #ccc solid 2px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    transition: all 0.2s ease-out;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck.accordion dt.on::after {
+    transform: rotate(-135deg);
+    top: 40%;
+}
+
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck.accordion dd {
+    padding-left: 15px;
+    border-left: #ccc solid 1px;
+    margin-left: 10px;
+    display: none;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck.accordion dd p {
+    margin-bottom: 10px;
+}
+
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck input {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    vertical-align: bottom;
+    position: relative;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck input:focus {
+    outline: none;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck input:checked {
+    background-color: #000;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck input:checked::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 10px;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    border-right: #fff solid 2px;
+    border-bottom: #fff solid 2px;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck label {
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    position: relative;
+    display: inline-block;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck.selectColor label {
+    padding-left: 30px;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck label::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c01:before { background: #FFFFFF; border: solid 1px #DCDCDC;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c02:before { background: #000;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c03:before { background: #999;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c04:before { background: #81604C;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c05:before { background: #e0d1ad;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c06:before { background: #9ed563;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c07:before { background: #4dbee9;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c08:before { background: #ad8eef;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c09:before { background: #fed14c;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c10:before { background: #f8afd7;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c11:before { background: #ef5663;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c12:before { background: #f98140;}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c13:before { background: linear-gradient(0deg, #f4f4f4 0%,#aaaaaa 50%,#e4e4e4 100%);}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c14:before { background: linear-gradient(0deg, #ffeea8 0%,#d9b61d 50%,#fff3c1 100%);}
+.itemListWrap .itemListSearch .itemListSearchBox .searchCheck .c15:before { background: linear-gradient(0deg, #85be5d 0%,#69afa1 35%,#b585b2 65%, #fcaf64 100%);}
+
+.itemListWrap .itemListSearch .itemListSearchBox .searchPriceForm input[type="text"] {
+    width: 35%;
+    border: #ccc solid 1px;
+    margin-right: 4px;
+    padding: 5px;
+}
+.itemListWrap .itemListSearch .itemListSearchBox .searchPriceForm label {
+    margin-right: 4px;
+}
+
+.itemListWrap .itemListMain {
+    width: calc(100% - 240px);
+    margin-left: 240px;
+}
+.itemListWrap .itemListMain .itemListHead {
+    padding: 50px 0 20px;
+}
+.itemListWrap .itemListMain .itemListHead h3 {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    margin-bottom: 40px;
+}
+.itemListWrap .itemListMain .itemListHead .searchWord {
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+.itemListWrap .itemListMain .itemListHead .searchWord dt {
+    width: 120px;
+}
+.itemListWrap .itemListMain .itemListHead .searchWord dd {
+    width: calc(100% - 120px);
+}
+
+.itemListWrap .itemListMain .itemListHead .sortPD {
+    position: relative;
+    text-align: right;
+}
+.itemListWrap .itemListMain .itemListHead .sortPD::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+    border-right: #000 solid 2px;
+    border-bottom: #000 solid 2px;
+    transform: translateY(-50%) rotate(45deg);
+}
+.itemListWrap .itemListMain .itemListHead .sortPD select {
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+}
+.itemListWrap .itemListMain .itemListHead .sortPD select:focus {
+    outline: none;
+}
+
+
+
+.itemDetail {
+    margin-top: 60px;
+    padding-bottom: 100px;
+}
+.itemDetail .itemPic {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.itemDetail .itemPic .itemSlide {
+    width: 48%;
+}
+.itemDetail .itemPic .itemSlide li img {
+    width: 100%;
+    height: auto;
+}
+.itemDetail .itemPic .itemSlide .slick-dotted.slick-slider {
+    margin-bottom: 35%;
+}
+.itemDetail .itemPic .itemSlide .slick-dots {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: flex !important;
+    justify-content: center;
+    transform: translateY(120%);
+}
+.itemDetail .itemPic .itemSlide .slick-dots li {
+    position: relative;
+    display: block;
+    width: calc(100% / 4);
+    height: auto;
+    margin: 0 2%;
+    padding: 0;
+    cursor: pointer;
+    line-height: 0;
+}
+.itemDetail .itemPic .itemSlide .slick-dots li.slick-active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: #000 solid 3px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.itemDetail .itemPic .detailInfo {
+    width: 48%;
+}
+
+.itemDetail .detailTxt {
+    padding: 80px 0;
+    border-top: #000 solid 2px;
+    border-bottom: #000 solid 2px;
+    margin-bottom: 60px;
+}
+.itemDetail .detailTxt p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.itemDetail h5 {
+    color: #666;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+}
+.itemDetail .itemTitle {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.detailInfoList {
+    margin-top: 40px;
+}
+.detailInfoList li {
+    padding: 15px 0 20px;
+    border-top: #000 solid 2px;
+}
+.detailInfoList li p {
+    font-size: 16px;
+}
+
+.detailInfoList li .sizeSelect {
+    width: 86%;
+    margin: 0 auto;
+    position: relative;
+}
+.detailInfoList li .sizeSelect select {
+    border: #d9d9d9 solid 3px;
+    padding: 20px;
+    font-size: 15px;
+    width: 100%;
+}
+.detailInfoList li .sizeSelect select:focus {
+    outline: none;
+}
+.detailInfoList li .sizeSelect::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 46%;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    border-right: #000 solid 2px;
+    border-bottom: #000 solid 2px;
+    transform: translateY(-50%) rotate(45deg);
+}
+.detailInfoList li.price p {
+    font-size: 18px;
+    font-weight: bold;
+}
+.detailInfoList li.price .buyBtn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.detailInfoList li.price .buyBtn a {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    letter-spacing: 0.06em;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    border: #000 solid 2px;
+    color: #000;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 18px;
+}
+.detailInfoList li.price .buyBtn a span {
+    display: inline-block;
+    padding-left: 35px;
+    background: url(../img/common/icon_fav.svg) no-repeat left 30%;
+    background-size: auto 70%;
+}
+.detailInfoList li.price .buyBtn .buy {
+    width: calc(100% - 240px);
+}
+.detailInfoList li.price .buyBtn .buy a {
+    background-color: #F49582;
+}
+.detailInfoList li.price .buyBtn .fav {
+    width: 200px;
+}
+.detailInfoList li.price .buyBtn .fav a {
+    font-size: 16px;
+}
+
+.detailInfo .tag {
+    display: flex;
+    margin-bottom: 30px;
+}
+.detailInfo .tag li {
+    text-align: center;
+    margin-right: 15px;
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 12px;
+    background-color: #999;
+}
+.detailInfo .tag li.new {
+    background-color: #0630FF;
+}
+
+.detailInfo .artistNameWrap {
+    display: flex;
+    justify-content: space-between;
+}
+.detailInfo .artistNameWrap .artistName {
+    width: calc(100% - 180px);
+}
+.followBtn {
+    width: 160px;
+}
+.followBtn a {
+    display: block;
+    background-image: linear-gradient(230deg, #C26E81 5%, #0630FF 70%);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: #000 solid 2px;
+}
+
+#otherItems {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+.itemDetail h2,
+#otherItems h2 {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+}
+#otherItems .itemList + h2 {
+    margin-top: 80px;
+}
+
+@media screen and (min-width: 813px) {
+    .itemListWrap .itemListSearch {
+        display: block !important;
+    }
+    .itemListClose {
+        display: none;
+    }
+}
+@media screen and (max-width: 812px) {
+    .itemListWrap {
+        margin-top: 8vw;
+        border-top: none;
+        display: block;
+    }
+
+    .itemListWrap .itemListSearch {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        display: none;
+        z-index: 9999;
+        transition: all 0.4s ease-out;
+        overflow: hidden;
+        background-color: rgba(0,0,0,0.6);
+    }
+    .itemListWrap .itemListSearch .itemListSearchInr {
+        width: 80vw;
+        height: 100%;
+        background-color: #fff;
+        overflow: auto;
+        padding: 16vw 6vw 6vw;
+        position: relative;
+        transition: all 0.4s ease-out;
+        transform: translateX(-100%);
+    }
+    .itemListWrap .itemListSearch.open .itemListSearchInr {
+        transform: translateX(0%);
+    }
+    .itemListWrap .itemListSearch .itemListSearchHead {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        background-color: #fff;
+        padding: 4vw 4vw 4vw 6vw;
+        z-index: 1;
+        transition: all 0.4s ease-out;
+        transform: translateX(-100%);
+    }
+    .itemListWrap .itemListSearch.open .itemListSearchHead {
+        transform: translateX(0%);
+    }
+    .itemListWrap .itemListSearchHead .itemListSearchTtl {
+        display: flex;
+        align-items: center;
+        min-width: 40vw;
+    }
+    .itemListWrap .itemListSearchHead .itemListSearchTtl .spItemSearch {
+        position: relative;
+    }
+    .itemListWrap .itemListSearchHead .itemListSearchTtl p {
+        font-size: 4.6vw;
+        font-weight: bold;
+    }
+
+
+
+    .itemListWrap .itemListSearch .itemListSearchBox .searchCheck.accordion dt {
+        font-size: 3vw;
+    }
+
+    .itemListWrap .itemListSearch .itemListClose {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        line-height: 0;
+        z-index: 10;
+        background-color: #fff;
+    }
+    .itemListWrap .itemListSearch .itemListClose a {
+        display: block;
+        padding: 8px;
+    }
+
+    .itemListWrap .itemListSearch .itemListSearchBox {
+        padding: 4vw 0;
+        border-bottom: #000 solid 1px;
+    }
+    .itemListWrap .itemListSearch .itemListSearchBox h4 {
+        font-size: 3.8vw;
+        margin-bottom: 3vw;
+    }
+    .itemListWrap .itemListSearch .itemListSearchBox .searchCheck li {
+        margin-bottom: 2vw;
+    }
+
+    .itemListWrap .itemListSearch .itemListSearchBox .searchCheck label {
+        margin-left: 2vw;
+        font-size: 3vw;
+    }
+    .itemListWrap .itemListSearch .itemListSearchBox .searchPriceForm input[type="text"] {
+        font-size: 16px;
+    }
+
+    .itemListWrap .itemListMain {
+        width: 100%;
+        border-left: none;
+        margin: 0;
+    }
+
+    .itemListWrap .itemListMain .itemListHead {
+        padding: 14vw 0 6vw;
+    }
+    .itemListWrap .itemListMain .itemListHead h3 {
+        font-size: 4.8vw;
+        margin-bottom: 6vw;
+    }
+    .itemListWrap .itemListMain .itemListHead .searchWord {
+        display: block;
+        font-size: 3.2vw;
+        margin: 4vw 0;
+        padding: 4vw 0;
+        border-top: #000 solid 1px;
+        border-bottom: #000 solid 1px;
+    }
+    .itemListWrap .itemListMain .itemListHead .searchWord dt {
+        width: 100%;
+    }
+    .itemListWrap .itemListMain .itemListHead .searchWord dd {
+        width: 100%;
+    }
+
+    .itemListWrap .itemListMain .itemListHead .sortPD {
+        text-align: center;
+        width: 35%;
+        margin: 0 auto;
+    }
+    .itemListWrap .itemListMain .itemListHead .sortPD select {
+        padding: 0;
+        font-size: 16px;
+        width: 100%;
+    }
+
+
+    .itemDetail {
+        margin-top: 10vw;
+        padding-bottom: 14vw;
+    }
+    .itemDetail .itemPic {
+        display: block;
+        margin-bottom: 6vw;
+    }
+    .itemDetail .itemPic .itemSlide {
+        width: 100%;
+    }
+    .itemDetail .itemPic .detailInfo {
+        width: 100%;
+    }
+    .detailInfo .tag {
+        margin-bottom: 6vw;
+    }
+    .detailInfo .tag li {
+        margin-right: 3vw;
+        padding: 1vw 4vw;
+        font-size: 2.8vw;
+    }
+    .itemDetail h5 {
+        font-size: 3vw;
+        margin-bottom: 1vw;
+    }
+    .itemDetail .itemTitle {
+        font-size: 4.2vw;
+    }
+
+    .detailInfoList {
+        margin-top: 6vw;
+    }
+    .detailInfoList li {
+        padding: 4vw 0 5vw;
+        border-top: #000 solid 1px;
+    }
+    .detailInfo .artistNameWrap .artistName {
+        width: calc(100% - 30vw);
+    }
+    .detailInfoList li p {
+        font-size: 3.8vw;
+    }
+    .followBtn {
+        width: 24vw;
+    }
+    .followBtn a {
+        font-size: 3.6vw;
+        padding: 3vw 3vw;
+    }
+
+    .detailInfoList li .sizeSelect {
+        width: 95%;
+    }
+    .detailInfoList li .sizeSelect select {
+        border: #d9d9d9 solid 2px;
+        padding: 3vw;
+        font-size: 16px;
+    }
+    .detailInfoList li .sizeSelect::after {
+        right: 5vw;
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .detailInfoList li.price p {
+        font-size: 4.2vw;
+    }
+    .detailInfoList li.price .buyBtn {
+        margin-top: 4vw;
+    }
+    .detailInfoList li.price .buyBtn .buy {
+        width: calc(100% - 40vw);
+    }
+    .detailInfoList li.price .buyBtn a {
+        padding: 2vw;
+        font-size: 3.8vw;
+    }
+    .detailInfoList li.price .buyBtn .fav {
+        width: 35vw;
+    }
+    .detailInfoList li.price .buyBtn .fav a {
+        font-size: 3.4vw;
+    }
+    .detailInfoList li.price .buyBtn a span {
+        padding-left: 6vw;
+        background: url(../img/common/icon_fav.svg) no-repeat left 35%;
+        background-size: auto 70%;
+    }
+
+    .itemDetail .detailTxt {
+        padding: 10vw 0;
+        margin-bottom: 8vw;
+        border-top: #000 solid 1px;
+        border-bottom: #000 solid 1px;
+    }
+    .itemDetail .detailTxt p {
+        font-size: 3.2vw;
+        margin-top: 4vw;
+    }
+
+    .itemDetail h2,
+    #otherItems h2 {
+        font-size: 6vw;
+        margin-bottom: 8vw;
+    }
+    #otherItems .itemList + h2 {
+        margin-top: 12vw;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////
+
+	Custom
+
+//////////////////////////////////////////////////////////////////////////////// */
+
+.artistsSearchWrap {
+    color: black;
+    text-align: left;
+}
+
+main {
+    padding-top: 0;
+    letter-spacing: 0;
+}
+
+#main_column.colnum1 {
+    width: 100%;
+}
+
+.artistListKana, .artistListAlphabet {
+    text-align: left;
+}
