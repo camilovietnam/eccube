@@ -7,9 +7,6 @@ namespace MyProject\Migrations;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 
-/**
- * Auto-generated Migration: Please modify to your needs!
- */
 final class Version20210201033022_create_table_dtb_operation_company extends AbstractMigration
 {
     public function getDescription() : string
@@ -19,7 +16,6 @@ final class Version20210201033022_create_table_dtb_operation_company extends Abs
 
     public function up(Schema $schema) : void
     {
-        // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('CREATE TABLE dtb_operation_company ('
             . 'operating_company_id	int,'
             . 'operating_company_name	text,'
@@ -39,7 +35,6 @@ final class Version20210201033022_create_table_dtb_operation_company extends Abs
 
     public function down(Schema $schema) : void
     {
-        // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('DROP TABLE dtb_operation_company');
     }
 }
