@@ -25,7 +25,7 @@ final class Version20210201040155_create_table_dtb_official_store_artist extends
             . 'artist_id	int,'
             . 'create_date	timestamp,'
             . 'update_date	timestamp,'
-            . 'delete_flg	smallint,'
+            . 'delete_flg	smallint'
             . ')'
         );
     }
