@@ -1252,6 +1252,6 @@ main {
     width: 100%;
 }
 
-.artistListKana {
+.artistListKana, .artistListAlphabet {
     text-align: left;
 }
